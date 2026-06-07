@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nabila Hulwana — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+<style>
+/* ═══════════════════════════════
+   TOKENS
+═══════════════════════════════ */
+:root {
+  /* ── NEW PALETTE ── */
+  --navy:       #2F4156;   /* Navy — primary dark */
+  --sky:        #C8D9E6;   /* Sky Blue — light accent */
+  --pale:       #FFE1E6;   /* Pale Pink — very light bg */
+  --azalea:     #F7C9D4;   /* Azalea — soft pink accent */
+  --berry:      #824D5C;   /* Winter Berry — deep accent */
+  --beige:      #F5EFEB;   /* Beige — warm neutral bg */
+  --white:      #FFFFFF;
+  --blue:       #7096D1;
+  /* ── SEMANTIC ALIASES ── */
+  --green:       var(--sky);
+  --green-dark:  var(--navy);
+  --green-light: var(--sky);
+  --pink:        var(--berry);
+  --pink-light:  var(--azalea);
+  --pink-glow:   rgba(130,77,92,0.25);
+  --cream:       var(--azalea);
+  --cream2:      var(--beige);
+  --text:        #2a2a3a;
+  --muted:       #6b7080;
+  --radius:      18px;
+  --shadow:      0 8px 32px rgba(47,65,86,0.12);
+  --trans:       .3s cubic-bezier(.4,0,.2,1);
+}
+
+/* ═══════════════════════════════
+   RESET
+═══════════════════════════════ */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text);
+  overflow-x: hidden;
+}
+a { text-decoration:none; color:inherit; }
+img { max-width:100%; }
+
+/* ═══════════════════════════════
+   NAV
+═══════════════════════════════ */
+#navbar {
+  position: fixed; top:0; left:0; right:0; z-index:1000;
+  display: flex; justify-content:space-between; align-items:center;
+  padding: 1rem 3%;
+  background: transparent;
+  transition: background var(--trans);
+}
+#navbar.scrolled {
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+.nav-logo {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem; font-weight:600;
+  color: var(--white);
+  transition: color var(--trans);
+}
+#navbar.scrolled .nav-logo { color: var(--green-dark); }
+
+.nav-pill {
+  display: flex; align-items:center;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(255,255,255,0.4);
+  border-radius: 50px;
+  padding: 0.4rem 0.5rem;
+  gap: 0.2rem;
+  transition: background var(--trans);
+}
+#navbar.scrolled .nav-pill {
+  background: rgba(234,222,191,0.5);
+  border-color: rgba(120,142,119,0.3);
+}
+.nav-pill a {
+  padding: 0.45rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.85rem; font-weight:600;
+  color: #FFE1E6;
+  transition: background var(--trans), color var(--trans);
+  white-space: nowrap;
+}
+.nav-pill a:hover { background: var(--pink-light); color: var(--berry); }
+.nav-pill a.active { background: var(--pink); color: var(--white); }
+
+/* ═══════════════════════════════
+   HERO
+═══════════════════════════════ */
+#home {
+  min-height: 100vh;
+  background: url('background/biru11.png') center center / cover no-repeat;
+  display: flex; flex-direction:column;
+  justify-content: center; align-items: center;
+  text-align: center;
+  padding: 6rem 2rem 3rem;
+  position: relative;
+}
+#home::before { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.08); pointer-events:none; }
+.hero-welcome { font-size:1.3rem; font-weight:700; color:#7096D1; letter-spacing:1px; text-shadow:0 1px 6px rgba(255,255,255,0.6); margin-bottom:.5rem; position:relative; z-index:1; }
+.hero-script { font-family:'Great Vibes',cursive; font-size:clamp(3.5rem,8vw,6.5rem); line-height:1.1; color:#C8D9E6; text-shadow:0 0 20px rgba(168,216,240,0.7), 0 2px 12px rgba(0,0,0,0.2); position:relative; z-index:1; animation:fadeUp 1s .2s both; }
+.hero-script span { color:#FFE1E6; text-shadow:0 0 22px rgba(255,133,161,0.8), 0 2px 10px rgba(0,0,0,0.2); }
+.hero-desc { font-size:1rem; font-weight:600; color:var(--white); max-width:580px; line-height:1.7; margin-top:1.5rem; text-shadow:0 1px 8px rgba(0,0,0,0.3); position:relative; z-index:1; animation:fadeUp 1s .4s both; }
+
+/* ═══════════════════════════════
+   SECTION BASE
+═══════════════════════════════ */
+section { min-height: 100vh; padding: 5rem 4%; }
+.section-script {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(3rem,5.5vw,4.5rem);
+  color: #824D5C;
+    text-shadow: 0 0 16px rgba(255,255,255,1.0),   /* glow putih dekat */
+               0 0 35px rgba(255,255,255,0.75),   /* glow putih sedang */
+               0 0 60px rgba(255,255,255,0.35),   /* glow putih jauh */
+               0 2px 8px rgba(0,0,0,0.15);         /* bayangan hitam */
+  margin-bottom: 2rem;
+}
+
+/* ═══════════════════════════════
+   PROFILE
+═══════════════════════════════ */
+#profile {
+  min-height: 100vh;
+  background: url('background/pink6.png') center center/cover no-repeat;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  padding: 6rem 4% 4rem; position: relative;
+}
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  align-items: stretch;
+  max-width: 1200px; margin: 0 auto; width: 100%;
+}
+
+/* Left: photo fills top, socials pinned at bottom */
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+.profile-photo-wrap {
+  width: 100%;
+  flex: 1;
+  border-radius: 20px; overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+  border: 4px solid var(--white);
+  outline: 1px solid rgba(226,151,150,0.25);
+  min-height: 320px;
+}
+.profile-photo-wrap img { width:100%; height:100%; object-fit:cover; object-position:top center; }
+
+.profile-socials {
+  display: flex; gap: .75rem; justify-content: center;
+  padding-top: 1rem;
+  width: 100%;
+}
+.profile-socials a {
+  width: 52px; height: 52px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  background: var(--white);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+  border: 2px solid rgba(255,255,255,0.9);
+  transition: transform var(--trans), box-shadow var(--trans);
+}
+.profile-socials a:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+.profile-socials .fa-whatsapp   { color: #25D366; }
+.profile-socials .fa-envelope   { color: #EA4335; }
+.profile-socials .fa-github     { color: #333; }
+.profile-socials .fa-linkedin-in{ color: #0A66C2; }
+
+/* Right: one unified white box — about + education seamlessly merged */
+.profile-right {
+  display: flex;
+  flex-direction: column;
+}
+.profile-box {
+  background: var(--white);
+  border-radius: var(--radius) var(--radius) 0 0;
+  padding: 2rem 2.5rem 1.5rem;
+  box-shadow: var(--shadow);
+  border: 2px solid rgba(255,255,255,0.95);
+  border-bottom: none;
+}
+.profile-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem; color: var(--green-dark); margin-bottom: .3rem;
+}
+.profile-box .job-title {
+  font-size: .78rem; font-weight: 700; color: var(--pink);
+  text-transform: uppercase; letter-spacing: .7px; margin-bottom: 1.2rem;
+}
+.profile-box p { font-size: .88rem; color: var(--muted); line-height: 1.8; margin-bottom: .8rem; }
+
+/* Education: seamlessly below, 2 cols horizontal */
+.edu-box {
+  background: var(--white);
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 1.5rem 2.5rem 2rem;
+  box-shadow: var(--shadow);
+  border: 2px solid rgba(255,255,255,0.95);
+  border-top: none;
+}
+.edu-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem; font-weight: 700;
+  color: var(--green-dark);
+  margin-bottom: 1rem;
+}
+/* 2 edu items side by side */
+.edu-items-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.edu-item {
+  display: flex; gap: .8rem; align-items: center;
+  padding: .9rem 1rem; border-radius: 12px;
+  background: var(--cream2);
+  border-left: 3px solid var(--pink);
+}
+.edu-item img { width: 44px; height: 44px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+.edu-item h4 { font-size: .85rem; font-weight: 700; color: var(--green-dark); margin-bottom: .15rem; }
+.edu-item p  { font-size: .76rem; color: var(--muted); margin: 0; }
+
+/* ═══════════════════════════════
+   EXPERIENCES
+═══════════════════════════════ */
+#experiences {
+  background: url('background/biru3.jpeg') center center / cover no-repeat;
+  position: relative;
+  display:flex; flex-direction:column; justify-content:center;
+}
+#experiences::before {
+  content:''; position:absolute; inset:0;
+  background: rgba(245,239,235,0.12);
+  pointer-events:none;
+}
+#experiences > * { position:relative; z-index:1; }
+#experiences .section-script { color: var(--green-dark); }
+
+.exp-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2rem;
+  max-width: 1200px; margin:0 auto; width:100%;
+}
+.exp-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.10);
+  border: 3px solid rgba(255,255,255,0.88);
+  outline: 1.5px solid rgba(255,255,255,0.5);
+  transition: transform var(--trans), box-shadow var(--trans);
+  pointer-events: none; /* NOT clickable */
+  user-select: none;
+}
+.exp-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 50px var(--pink-glow), 0 12px 30px rgba(0,0,0,0.12);
+  pointer-events: none;
+}
+
+/* Slider */
+.exp-slider { position:relative; height:220px; overflow:hidden; }
+.exp-slides { display:flex; height:100%; transition: transform 0.5s ease; }
+.exp-slides img { min-width:100%; height:100%; object-fit:cover; flex-shrink:0; }
+.slider-btn {
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:32px; height:32px; border-radius:50%;
+  background:rgba(255,255,255,0.7); border:none;
+  font-size:1rem; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  color: var(--green-dark);
+  transition: background var(--trans);
+  z-index:3; pointer-events:all;
+}
+.slider-btn:hover { background: var(--pink-light); }
+.slider-btn.left { left:10px; }
+.slider-btn.right { right:10px; }
+
+.exp-body { padding:1.5rem; }
+.exp-tag {
+  display:inline-block; font-size:0.72rem; font-weight:700;
+  letter-spacing:.7px; text-transform:uppercase;
+  color: var(--pink); background:rgba(226,151,150,0.12);
+  padding:.25rem .7rem; border-radius:50px; margin-bottom:.7rem;
+}
+.exp-body h3 { font-size:1.1rem; font-weight:700; color:var(--green-dark); margin-bottom:.2rem; }
+.exp-company { font-size:.88rem; font-weight:600; color:var(--berry); margin-bottom:.2rem; }
+.exp-period { font-size:.78rem; color:var(--muted); margin-bottom:.8rem; }
+.exp-list { padding-left:1.1rem; font-size:.83rem; color:var(--text); line-height:1.65; }
+.exp-list li { margin-bottom:.45rem; }
+
+
+/* PROJECTS */
+#projects { background:url('background/pink6.png') center center/cover no-repeat; position:relative; }
+#projects::before { content:''; position:absolute; inset:0; background:rgba(255,255,255,0.20); pointer-events:none; }
+#projects > * { position:relative; z-index:1; }
+.proj-header { display:flex; align-items:flex-start; gap:3rem; margin-bottom:2.5rem; flex-wrap:wrap; }
+.proj-header .section-script { margin-bottom:0; }
+.proj-filters { display:flex; gap:.7rem; flex-wrap:wrap; padding-top:.8rem; }
+.filt-btn { padding:.45rem 1.3rem; border-radius:50px; border:2px solid var(--pink-light); background:rgba(255,255,255,0.7); color:var(--pink); font-size:.83rem; font-weight:700; cursor:pointer; font-family:'Open Sans',sans-serif; transition:all var(--trans); }
+.filt-btn:hover,.filt-btn.active { background:var(--pink); color:var(--white); border-color:var(--pink); }
+.proj-viewport { overflow:hidden; }
+.proj-pages { display:flex; transition:transform .5s ease; }
+.proj-page { min-width:100%; display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+.proj-card {
+  background: rgba(255,255,255,0.88);
+  border-radius: var(--radius); overflow:hidden;
+  box-shadow: var(--shadow);
+  border: 3px solid rgba(255,255,255,0.92);
+  outline: 1px solid rgba(226,151,150,0.15);
+  cursor:pointer;
+  transition:transform var(--trans),box-shadow var(--trans);
+}
+.proj-card:hover { transform:translateY(-5px); box-shadow:0 16px 40px var(--pink-glow); }
+.proj-thumb-wrap { position:relative; height:180px; background:linear-gradient(135deg,var(--cream),var(--pink-light)); overflow:hidden; }
+.proj-thumb-wrap img { width:100%; height:100%; object-fit:cover; transition:transform var(--trans); }
+.proj-card:hover .proj-thumb-wrap img { transform:scale(1.05); }
+.proj-body { padding:1.1rem; }
+.proj-cat-badge { display:inline-block; font-size:.7rem; font-weight:700; letter-spacing:.6px; text-transform:uppercase; color:var(--pink); background:rgba(226,151,150,0.12); padding:.2rem .65rem; border-radius:50px; margin-bottom:.5rem; }
+.proj-body h3 { 
+  font-size:.92rem; 
+  font-weight:700; 
+  color:var(--green-dark); 
+  margin-bottom:.4rem;  /* ← tambah ini */
+}
+
+.proj-body p { 
+  font-size:.82rem; 
+  color:var(--muted); 
+  line-height:1.6; 
+  margin-top:.4rem;
+}
+.proj-tools { 
+  font-size:.72rem; 
+  color:var(--muted) !important; 
+  margin-top:.3rem; 
+  display:block !important;
+  visibility:visible !important;
+  overflow:visible;
+}
+.proj-pagination { display:flex; justify-content:center; gap:.6rem; margin-top:1.5rem; }
+.proj-dot { width:10px; height:10px; border-radius:50%; background:var(--pink-light); border:none; cursor:pointer; transition:background var(--trans),transform var(--trans); }
+.proj-dot.active { background:var(--pink); transform:scale(1.3); }
+
+/* MODAL */
+.proj-modal-overlay {
+  display:none; position:fixed; inset:0; z-index:2000;
+  background:rgba(0,0,0,0.6); backdrop-filter:blur(5px);
+  align-items:center; justify-content:center; padding:1.5rem;
+}
+.proj-modal-overlay.open { display:flex; }
+.proj-modal {
+  background:var(--white); border-radius:24px;
+  width:100%; max-width:1100px; height:88vh;
+  overflow:hidden; display:grid; grid-template-columns:1fr 1fr;
+  box-shadow:0 30px 80px rgba(0,0,0,0.3);
+  animation:modalIn .3s ease;
+}
+@keyframes modalIn { from{opacity:0;transform:scale(.95)} to{opacity:1;transform:scale(1)} }
+.modal-left { padding:2.5rem 2rem; overflow-y:auto; display:flex; flex-direction:column; gap:1rem; }
+.modal-back { width:38px; height:38px; border-radius:50%; background:var(--pink-light); border:none; font-size:1.1rem; cursor:pointer; color:#c0544e; display:flex; align-items:center; justify-content:center; transition:background var(--trans); flex-shrink:0; }
+.modal-back:hover { background:var(--pink); color:var(--white); }
+.modal-title { font-family:'Playfair Display',serif; font-size:1.5rem; color:var(--green-dark); line-height:1.3; }
+.modal-cat { display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.7px; text-transform:uppercase; color:var(--white); background:var(--pink); padding:.3rem .9rem; border-radius:50px; }
+.modal-links { display:flex; gap:.6rem; flex-wrap:wrap; }
+.modal-links a { padding:.42rem 1rem; border-radius:50px; font-size:.78rem; font-weight:700; background:var(--cream2); color:var(--green-dark); border:1.5px solid var(--cream); transition:background var(--trans),color var(--trans); display:inline-flex; align-items:center; gap:.35rem; }
+.modal-links a:hover { background:var(--pink); color:var(--white); border-color:var(--pink); }
+.modal-desc { font-size:.84rem; color:var(--muted); line-height:1.8; }
+.modal-tech h4 { font-size:.78rem; font-weight:700; letter-spacing:.6px; text-transform:uppercase; color:var(--green-dark); margin-bottom:.7rem; }
+.tech-icons { display:flex; flex-wrap:wrap; gap:.7rem; align-items:center; }
+.tech-icon { display:flex; flex-direction:column; align-items:center; gap:.25rem; font-size:.65rem; color:var(--muted); font-weight:600; }
+.tech-icon i { font-size:1.8rem; }
+.tech-icon .ti-label { font-size:.62rem; }
+
+/* Modal right: gallery */
+.modal-right { background:var(--cream2); position:relative; overflow:hidden; display:flex; flex-direction:column; }
+.modal-gallery { flex:1; position:relative; overflow:hidden; }
+.modal-slides { display:flex; height:100%; transition:transform .4s ease; }
+.modal-slides img { min-width:100%; height:100%; object-fit:contain; flex-shrink:0; background:var(--cream2); }
+/* PDF slide */
+.pdf-slide { min-width:100%; height:100%; flex-shrink:0; display:flex; flex-direction:column; position:relative; }
+.pdf-slide embed { flex:1; width:100%; border:none; }
+.pdf-download-btn {
+  display:flex; align-items:center; justify-content:center; gap:.5rem;
+  padding:.75rem 1.5rem; background:var(--pink); color:var(--white);
+  font-size:.85rem; font-weight:700; text-decoration:none;
+  border-radius:0; transition:background var(--trans);
+  flex-shrink:0;
+}
+.pdf-download-btn:hover { background:var(--green-dark); }
+.modal-arrow { position:absolute; top:50%; transform:translateY(-50%); width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.8); border:none; font-size:1.1rem; cursor:pointer; color:var(--green-dark); display:flex; align-items:center; justify-content:center; transition:background var(--trans); z-index:5; }
+.modal-arrow:hover { background:var(--white); }
+.modal-arrow.left { left:12px; } .modal-arrow.right { right:12px; }
+.modal-img-count { position:absolute; bottom:10px; right:14px; background:rgba(0,0,0,0.4); color:var(--white); font-size:.72rem; padding:.2rem .6rem; border-radius:50px; }
+
+
+/* ═══════════════════════════════
+   CERTIFICATES
+═══════════════════════════════ */
+#certificates { background:url('background/biru15.png') center center/cover no-repeat; position:relative; }
+#certificates .section-script {
+  color: var(--white);
+  text-shadow: 0 0 20px rgba(226,151,150,0.8), 0 0 40px rgba(226,151,150,0.4);
+}
+.cert-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; max-width: 1200px; margin: 0 auto; width: 100%;
+}
+.cert-card {
+  background: rgba(255,255,255,0.92);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+  border: 3px solid rgba(255,255,255,0.88);
+  outline: 1.5px solid rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: transform var(--trans), box-shadow var(--trans);
+  display: flex; flex-direction: column;
+}
+.cert-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 48px var(--pink-glow);
+}
+/* preview image area */
+.cert-thumb {
+  width: 100%; height: 160px; overflow: hidden;
+  background: linear-gradient(135deg, var(--cream), var(--pink-light));
+  position: relative; flex-shrink: 0;
+}
+.cert-thumb img {
+  width: 100%; height: 100%; object-fit: cover; object-position: top;
+  transition: transform var(--trans);
+}
+.cert-card:hover .cert-thumb img { transform: scale(1.04); }
+.cert-thumb-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem; color: rgba(226,151,150,0.5);
+}
+/* card body */
+.cert-body {
+  padding: 1.1rem 1.2rem 1.3rem;
+  display: flex; flex-direction: column; flex: 1;
+}
+.cert-body h4 {
+  font-size: .88rem; font-weight: 700; color: var(--green-dark);
+  margin-bottom: .35rem; line-height: 1.4;
+}
+.cert-meta {
+  font-size: .75rem; color: var(--muted); margin-bottom: 1rem; flex: 1;
+}
+.cert-view-btn {
+  align-self: flex-start;
+  padding: .4rem 1.1rem; border-radius: 50px;
+  background: transparent; border: 2px solid var(--pink);
+  color: var(--pink); font-size: .78rem; font-weight: 700;
+  cursor: pointer; font-family: 'Open Sans', sans-serif;
+  transition: background var(--trans), color var(--trans);
+}
+.cert-view-btn:hover { background: var(--pink); color: var(--white); }
+
+/* Certificate viewer modal */
+.cert-modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 2100;
+  background: rgba(0,0,0,0.78); backdrop-filter: blur(6px);
+  align-items: center; justify-content: center; padding: 1.5rem;
+}
+.cert-modal-overlay.open { display: flex; }
+.cert-modal {
+  background: var(--white); border-radius: 20px;
+  width: 100%; max-width: 860px; max-height: 92vh;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+  animation: modalIn .3s ease;
+}
+.cert-modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.1rem 1.6rem;
+  background: linear-gradient(135deg, var(--green-dark), #3d2a3a);
+  flex-shrink: 0;
+}
+.cert-modal-header h3 {
+  font-size: .95rem; font-weight: 700; color: var(--white);
+  flex: 1; margin: 0 1rem; line-height: 1.35;
+}
+.cert-modal-close {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(245,239,235,0.12); border: none;
+  color: var(--white); font-size: 1rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: background var(--trans);
+}
+.cert-modal-close:hover { background: rgba(226,151,150,0.5); }
+.cert-modal-body {
+  flex: 1; overflow-y: auto;
+  display: flex; align-items: flex-start; justify-content: center;
+  background: #efefef; padding: 1.5rem;
+}
+.cert-modal-body img {
+  max-width: 100%; border-radius: 10px; object-fit: contain;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+.cert-modal-footer {
+  padding: 1rem 1.6rem;
+  display: flex; justify-content: center; gap: 1rem;
+  background: var(--white); border-top: 1px solid var(--cream);
+  flex-shrink: 0;
+}
+.cert-dl-btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .65rem 1.8rem; border-radius: 50px;
+  background: var(--green-dark); color: var(--white);
+  font-size: .85rem; font-weight: 700; text-decoration: none;
+  transition: background var(--trans), transform var(--trans);
+}
+.cert-dl-btn:hover { background: var(--pink); transform: translateY(-1px); }
+
+/* ═══════════════════════════════
+   CONTACT / FOOTER
+═══════════════════════════════ */
+#contact {
+  background: linear-gradient(135deg, #2F4156 0%, #4a3060 50%, #824D5C 100%);
+  text-align:center; padding:5rem 4%;
+  min-height:auto;
+}
+#contact .section-script { color: #FFE1E6; text-shadow: 0 0 18px rgba(130,77,92,0.5), 0 0 35px rgba(245,239,235,0.3); }
+#contact p { color:rgba(255,255,255,.7); font-size:.95rem; margin-bottom:2rem; max-width:460px; margin-left:auto; margin-right:auto; }
+.contact-socials { display:flex; justify-content:center; gap:1rem; }
+.contact-socials a {
+  width:54px; height:54px; border-radius:50%;
+  background:rgba(255,255,255,.12); border:1.5px solid rgba(255,255,255,.25);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--white); font-size:1.3rem;
+  transition:background var(--trans), transform var(--trans);
+}
+.contact-socials a:hover { background:var(--berry); transform:translateY(-3px); }
+footer {
+  text-align:center; padding:1.2rem;
+  background: linear-gradient(90deg, #2F4156, #4a3060); color:rgba(255,255,255,.4); font-size:.78rem;
+}
+
+/* ═══════════════════════════════
+   ANIMATIONS
+═══════════════════════════════ */
+@keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+
+/* ═══════════════════════════════
+   RESPONSIVE
+═══════════════════════════════ */
+@media(max-width:1024px) {
+  .profile-layout { grid-template-columns:1fr; }
+  .profile-right { grid-template-columns:1fr; }
+  .exp-grid { grid-template-columns:1fr 1fr; }
+  .cert-grid { grid-template-columns:1fr 1fr; }
+  .proj-page { grid-template-columns:1fr 1fr; }
+  .proj-modal { grid-template-columns:1fr; max-height:90vh; overflow-y:auto; }
+  .modal-right { height:300px; min-height:300px; }
+}
+@media(max-width:680px) {
+  .exp-grid,.cert-grid { grid-template-columns:1fr; }
+  .proj-page { grid-template-columns:1fr; }
+  .proj-header { flex-direction:column; gap:1rem; }
+  nav { padding:.8rem 4%; }
+  .nav-pill a { padding:.4rem .9rem; font-size:.78rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav id="navbar">
+  <div class="nav-logo">Nabila Hulwana</div>
+  <div class="nav-pill">
+    <a href="#profile" class="nav-link" data-section="profile">Profile</a>
+    <a href="#experiences" class="nav-link" data-section="experiences">Experience</a>
+    <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+    <a href="#certificates" class="nav-link" data-section="certificates">Certificates</a>
+    <a href="CV - Nabila Hulwana - 2026.pdf" download>Resume</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="home">
+  <div class="hero-welcome">Welcome to My Portfolio</div>
+  <div class="hero-script">Hi, I am <span>Nabila Hulwana</span></div>
+  <p class="hero-desc">Mahasiswi Sistem Informasi yang berfokus pada Data Analytics, Data Engineering, dan pengembangan web. Passionate about turning data into meaningful insights</p>
+</section>
+
+<!-- ═══ PROFILE ═══ -->
+<section id="profile">
+  <div class="section-script">About me,</div>
+  <div class="profile-layout">
+
+    <!-- Kiri: Foto & Sosmed -->
+    <div class="profile-left">
+      <div class="profile-photo-wrap">
+        <img src="aku1.png" onerror="this.src='https://placehold.co/300x400/EADEBF/788E77?text=Nabila'" alt="Nabila Hulwana">
+      </div>
+      <div class="profile-socials">
+        <a href="https://wa.me/6285746707251" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:nabila.hlwana@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/nabilahlw/" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/nabila-hulwana-109016286/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Kanan: Satu kotak putih (about + education menyatu) -->
+    <div class="profile-right">
+      <div class="profile-box">
+        <h3>Nabila Hulwana Zuhud</h3>
+        <div class="job-title">Undergraduate Student of Information Systems</div>
+        <p>Mahasiswi S1 Sistem Informasi, semester 6, kelas karyawan di Universitas Duta Bangsa Surakarta dengan fokus pada Data Analytics, Data Engineering, dan pengembangan web.</p>
+        <p>Saya berpengalaman lebih dari 3 tahun di bidang pendidikan sebagai Asisten Guru Kelas di TK Islam Al-Madinah Kartasura, tutoring pelajaran SMP dan sekarang aktif sebagai Coding Tutor di KodeKiddo Surakarta (part time) mengajar coding dan logika berpikir untuk siswa SD–SMP melalui proyek kreatif seperti game, storytelling menggunakan Scratch, Tinkercad, dan Arduino.</p>
+        <p>Di bidang data, saya terampil menggunakan SQL, Python, PySpark, Apache Kafka, PostgreSQL, dan tools ETL untuk membangun pipeline data end-to-end, serta membuat dashboard interaktif dengan Tableau, Power BI, Excel, dan Streamlit. Untuk pengembangan aplikasi dan web saya berpengalaman dengan Flutter, Firebase, Laravel, PHP, JavaScript, Golang dan GitHub disertai dengan adaptabilitas dan kerja tim yang baik</p>
+      </div>
+      <div class="edu-box">
+        <h3>Education</h3>
+        <div class="edu-items-row">
+          <div class="edu-item">
+            <img src="background/udb.jpeg" onerror="this.src='https://placehold.co/44x44/788E77/FFFFFF?text=UDB'" alt="UDB">
+            <div>
+              <h4>Universitas Duta Bangsa</h4>
+              <p>S1 Sistem Informasi</p>
+              <p>2023 – Sekarang</p>
+            </div>
+          </div>
+          <div class="edu-item">
+            <img src="background/pondok.jpg" onerror="this.src='https://placehold.co/44x44/EADEBF/788E77?text=IB'" alt="Imam Bukhari">
+            <div>
+              <h4>PKKMB Imam Bukhari</h4>
+              <p>SMP dan SMA</p>
+              <p>2016 – 2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ EXPERIENCES ═══ -->
+<section id="experiences">
+  <div class="section-script">My Experiences</div>
+  <div class="exp-grid">
+
+    <!-- EXP 1 -->
+    <div class="exp-card">
+      <div class="exp-slider" id="sl-exp1">
+        <div class="exp-slides">
+          <img src="experiences/almadinah/almadinah 1.png" onerror="this.src='https://placehold.co/400x220/EADEBF/788E77?text=Al-Madinah+1'" alt="Al-Madinah 1">
+          <img src="experiences/almadinah/almadinah 2.png" onerror="this.src='https://placehold.co/400x220/E29796/FFFFFF?text=Al-Madinah+2'" alt="Al-Madinah 2">
+        </div>
+        <button class="slider-btn left" onclick="slideExp('exp1',-1)">❮</button>
+        <button class="slider-btn right" onclick="slideExp('exp1',1)">❯</button>
+      </div>
+      <div class="exp-body">
+        <span class="exp-tag">Education</span>
+        <h3>Guru Pendamping</h3>
+        <div class="exp-company">TK Al-Madinah Kartasura</div>
+        <div class="exp-period">Full-time | 2023 – 2025</div>
+        <ul class="exp-list">
+          <li>Membantu merancang program pembelajaran berdasarkan tema dan modul kurikulum yang berlaku.</li>
+          <li>Mengelola kelas serta mengatur jadwal kegiatan siswa.</li>
+          <li>Menyusun dan mengirim laporan harian siswa kepada orang tua melalui grup WhatsApp.</li>
+          <li>Membantu memantau perkembangan serta aktivitas siswa di kelas.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- EXP 2 -->
+    <div class="exp-card">
+      <div class="exp-slider" id="sl-exp2">
+        <div class="exp-slides">
+          <img src="experiences/kodekiddo/kodekiddo 1.png" onerror="this.src='https://placehold.co/400x220/EADEBF/788E77?text=KodeKiddo+1'" alt="KodeKiddo 1">
+          <img src="experiences/kodekiddo/kodekiddo 2.png" onerror="this.src='https://placehold.co/400x220/E29796/FFFFFF?text=KodeKiddo+2'" alt="KodeKiddo 2">
+        </div>
+        <button class="slider-btn left" onclick="slideExp('exp2',-1)">❮</button>
+        <button class="slider-btn right" onclick="slideExp('exp2',1)">❯</button>
+      </div>
+      <div class="exp-body">
+        <span class="exp-tag">Tech Education</span>
+        <h3>Coding Tutor</h3>
+        <div class="exp-company">KodeKiddo Surakarta</div>
+        <div class="exp-period">Part-time | Des 2025 – sekarang</div>
+        <ul class="exp-list">
+          <li>Mengajarkan dasar logika pemrograman kepada siswa SD dan SMP.</li>
+          <li>Menggunakan Scratch, Code.org, dan Tinkercad sebagai media pembelajaran coding.</li>
+          <li>Membimbing siswa membuat proyek storytelling dan game sederhana.</li>
+          <li>Membantu mengembangkan kreativitas, logika berpikir, dan problem solving siswa.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- EXP 3 -->
+    <div class="exp-card">
+      <div class="exp-slider" id="sl-exp3">
+        <div class="exp-slides">
+          <img src="experiences/seventheducation/seventheducation 1.png" onerror="this.src='https://placehold.co/400x220/EADEBF/788E77?text=Seventh+1'" alt="Seventh 1">
+          <img src="experiences/seventheducation/seventheducation 2.png" onerror="this.src='https://placehold.co/400x220/E29796/FFFFFF?text=Seventh+2'" alt="Seventh 2">
+        </div>
+        <button class="slider-btn left" onclick="slideExp('exp3',-1)">❮</button>
+        <button class="slider-btn right" onclick="slideExp('exp3',1)">❯</button>
+      </div>
+      <div class="exp-body">
+        <span class="exp-tag">Tutoring</span>
+        <h3>Tentor Akademik</h3>
+        <div class="exp-company">Seventh Education Surakarta</div>
+        <div class="exp-period">Part-time | Jan 2026 – Mar 2026</div>
+        <ul class="exp-list">
+          <li>Mengajar siswa SMP kelas 7 dan 8.</li>
+          <li>Mengajarkan mata pelajaran Bahasa Indonesia dan Bahasa Inggris.</li>
+          <li>Membantu siswa mempersiapkan diri menghadapi ujian TKA.</li>
+          <li>Membimbing pemahaman materi, grammar, dan strategi pengerjaan soal.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ PROJECTS ═══ -->
+<section id="projects">
+  <div class="proj-header">
+    <div class="section-script">My Projects</div>
+    <div class="proj-filters">
+      <button class="filt-btn active" data-filter="all">All</button>
+      <button class="filt-btn" data-filter="data">Data Analyst</button>
+      <button class="filt-btn" data-filter="engineering">Data Engineering</button>
+      <button class="filt-btn" data-filter="app">App / Web Development</button>
+    </div>
+  </div>
+
+  <div class="proj-viewport">
+    <div class="proj-pages" id="projPages">
+
+      <!-- PAGE 1 (projects 1-6) -->
+<div class="proj-page">
+
+  <!-- P1 -->
+  <div class="proj-card" data-cat="data" onclick="openModal('p1')">
+    <div class="proj-thumb-wrap">
+      <img src="projects/fhv/gambar1.png" onerror="this.src='https://placehold.co/400x160/EADEBF/788E77?text=FHV+Analysis'" alt="FHV">
+    </div>
+    <div class="proj-body">
+      <span class="proj-cat-badge">Data Analysis</span>
+      <h3>FHV Trip Record Analysis NYC</h3>
+      <p class="proj-tools">Python · SQL · Tableau · Matplotlib</p>
+      <p>Analisis data perjalanan FHV (Uber & Lyft) NYC, ML prediksi durasi perjalanan, dan dashboard Tableau interaktif.</p>
+    </div>
+  </div>
+
+  <!-- P2 -->
+  <div class="proj-card" data-cat="data" onclick="openModal('p2')">
+    <div class="proj-thumb-wrap">
+      <img src="projects/hr/gambar1.png" onerror="this.src='https://placehold.co/400x160/E29796/FFFFFF?text=HR+Attrition'" alt="HR">
+    </div>
+    <div class="proj-body">
+      <span class="proj-cat-badge">Data Analysis</span>
+      <h3>HR Attrition Analysis</h3>
+      <p class="proj-tools">Python · SQL · Power BI · Excel · Github</p>
+      <p>Identifikasi faktor utama resign karyawan menggunakan Python, SQL, dan Power BI berbasis IBM HR Analytics dataset.</p>
+    </div>
+  </div>
+
+  <!-- P3 -->
+  <div class="proj-card" data-cat="data" onclick="openModal('p3')">
+    <div class="proj-thumb-wrap">
+      <img src="projects/airbnb/gambar1.png" onerror="this.src='https://placehold.co/400x160/788E77/FFFFFF?text=Airbnb+AI'" alt="Airbnb">
+    </div>
+    <div class="proj-body">
+      <span class="proj-cat-badge">Data Analysis · AI</span>
+      <h3>AI-Powered Airbnb LA Analysis</h3>
+      <p class="proj-tools">AI Agent (IBM Granite) · LangChain · Python · Pandas · Seaborn · Jupyter</p>
+      <p>Analisis 32.442 listing Airbnb LA menggunakan IBM Granite 3.3 untuk klasifikasi AI berbasis deskripsi listing.</p>
+    </div>
+  </div>
+
+  <!-- P4 -->
+  <div class="proj-card" data-cat="data" onclick="openModal('p4')">
+    <div class="proj-thumb-wrap">
+      <img src="projects/dqfashion/gambar1.png" onerror="this.src='https://placehold.co/400x160/C5C099/FFFFFF?text=DQFashion'" alt="DQFashion">
+    </div><!-- ✅ FIX: tag penutup proj-thumb-wrap ditambahkan di sini -->
+    <div class="proj-body">
+      <span class="proj-cat-badge">Data Analysis</span>
+      <h3>DQFashion Sales Analysis 2017</h3>
+      <p class="proj-tools">Excel · Power Query · Pivot</p>
+      <p>Analisis penjualan & revenue 118K+ transaksi dari 4 cabang Indonesia dengan Power Query, Pivot, dan Dashboard Excel.</p>
+    </div>
+  </div>
+
+  <!-- P5 -->
+  <div class="proj-card" data-cat="engineering" onclick="openModal('p5')">
+    <div class="proj-thumb-wrap">
+      <img src="projects/tmdb/gambar1.png" onerror="this.src='https://placehold.co/400x160/5a6e59/FFFFFF?text=TMDB+Pipeline'" alt="TMDB">
+    </div>
+    <div class="proj-body">
+      <span class="proj-cat-badge">Data Engineering</span>
+      <h3>TMDB End-to-End Data Pipeline</h3>
+      <p class="proj-tools">PostgreSQL · PySpark · Python · dbt · Kafka · ClickHouse · MinIO · Streamlit · Airflow · BigQuery</p>
+      <p>Pipeline Medallion Architecture (Bronze→Silver→Gold), Kafka CDC, ClickHouse, MinIO, dan Streamlit dashboard.</p>
+    </div>
+  </div>
+
+  <!-- P6 -->
+  <div class="proj-card" data-cat="app" onclick="openModal('p6')">
+    <div class="proj-thumb-wrap">
+      <img src="projects/finote/gambar1.png" onerror="this.src='https://placehold.co/400x160/E29796/FFFFFF?text=Finote'" alt="Finote">
+    </div>
+    <div class="proj-body">
+      <span class="proj-cat-badge">Mobile Development</span>
+      <h3>FINOTE — Digital Wallet App</h3>
+      <p class="proj-tools">Flutter · Firebase · Dart · Android Studio</p>
+      <p>Aplikasi pencatatan keuangan pribadi berbasis Flutter & Firebase dengan CRUD transaksi dan Firebase Auth.</p>
+    </div>
+  </div>
+
+</div><!-- end page 1 -->
+
+<!-- PAGE 2 (project 7+) -->
+<div class="proj-page">
+
+  <!-- P7 -->
+  <div class="proj-card" data-cat="app" onclick="openModal('p7')">
+    <div class="proj-thumb-wrap">
+      <img src="projects/trainin/gambar1.png" onerror="this.src='https://placehold.co/400x160/788E77/FFFFFF?text=Train+IN'" alt="Train IN">
+    </div>
+    <div class="proj-body">
+      <span class="proj-cat-badge">Web Development</span>
+      <h3>TRAIN IN — Ticketing Website</h3>
+      <p class="proj-tools">PHP · HTML · CSS · JavaScript · MySQL</p>
+      <p>Sistem e-ticketing kereta api berbasis PHP & JS dengan pencarian jadwal, CRUD, upload bukti bayar, dan cetak invoice.</p>
+    </div>
+  </div>
+
+</div><!-- end page 2 -->
+
+        <!-- Placeholder kosong — nanti isi project baru -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+      </div><!-- end page 2 -->
+
+    </div><!-- end proj-pages -->
+  </div><!-- end proj-viewport -->
+
+  <div class="proj-pagination" id="projDots"></div>
+</section>
+
+<!-- ═══ PROJECT MODAL ═══ -->
+<div class="proj-modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="proj-modal" id="projModal">
+
+    <!-- LEFT: info -->
+    <div class="modal-left">
+      <button class="modal-back" onclick="closeModal()"><i class="fas fa-arrow-left"></i></button>
+      <h2 class="modal-title" id="mTitle"></h2>
+      <span class="modal-cat" id="mCat"></span>
+      <div class="modal-links" id="mLinks"></div>
+      <p class="modal-desc" id="mDesc"></p>
+      <div class="modal-tech">
+        <h4>Tech Stack</h4>
+        <div class="tech-icons" id="mTech"></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: gallery -->
+    <div class="modal-right">
+      <div class="modal-gallery" id="modalGallery">
+        <div class="modal-slides" id="mSlides"></div>
+        <button class="modal-arrow left" onclick="slideModal(-1)">❮</button>
+        <button class="modal-arrow right" onclick="slideModal(1)">❯</button>
+        <div class="modal-img-count" id="mCount"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ CERTIFICATES ═══ -->
+<section id="certificates">
+  <div class="section-script">Certificates</div>
+  <div class="cert-grid">
+ 
+    <div class="cert-card" onclick="openCert('Advanced Tableau: Data Storytelling &amp; Geospatial Visualization', 'https://drive.google.com/file/d/1VbzMMW02c1rI98VttQri2od3dx-a4RNg/preview', 'https://drive.google.com/uc?export=download&amp;id=1VbzMMW02c1rI98VttQri2od3dx-a4RNg')">
+      <div class="cert-thumb">
+        <img src="certificates/sertif1.png" alt="Advanced Tableau" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="cert-thumb-placeholder" style="display:none"><i class="fas fa-certificate"></i></div>
+      </div>
+      <div class="cert-body">
+        <h4>Advanced Tableau: Data Storytelling & Geospatial Visualization</h4>
+        <div class="cert-meta">SmartPath · 20 August 2025 · 022/SP/VIII/2025</div>
+        <button class="cert-view-btn">View Certificate</button>
+      </div>
+    </div>
+ 
+    <div class="cert-card" onclick="openCert('Belajar Dasar Cloud dan Gen AI di AWS', 'https://drive.google.com/file/d/1FitDy0euaLKGKZa-jCuEpqRA9xQW-EkA/preview', 'https://drive.google.com/uc?export=download&amp;id=1FitDy0euaLKGKZa-jCuEpqRA9xQW-EkA')">
+      <div class="cert-thumb">
+        <img src="certificates/sertif2.png" alt="Cloud AWS" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="cert-thumb-placeholder" style="display:none"><i class="fas fa-certificate"></i></div>
+      </div>
+      <div class="cert-body">
+        <h4>Belajar Dasar Cloud dan Gen AI di AWS</h4>
+        <div class="cert-meta">Dicoding Indonesia · 18 Oktober 2025 · 4EXG3VNDQZRL</div>
+        <button class="cert-view-btn">View Certificate</button>
+      </div>
+    </div>
+<div class="cert-card" onclick="openCert('Introduction to Data Engineering', 'https://drive.google.com/file/d/1VnTyRk_yrVM0mzvcm0N0MRAUAQgoErei/preview', 'https://drive.google.com/uc?export=download&id=1VnTyRk_yrVM0mzvcm0N0MRAUAQgoErei')">
+  <div class="cert-thumb">
+    <img src="certificates/sertif3.png" alt="Intro Data Engineering" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="cert-thumb-placeholder" style="display:none"><i class="fas fa-certificate"></i></div>
+  </div>
+  <div class="cert-body">
+    <h4>Introduction to Data Engineering</h4>
+    <div class="cert-meta">IBM / Coursera · Dec 30, 2025 · coursera.org/verify/5C3M8EI9TG86</div>
+    <button class="cert-view-btn">View Certificate</button>
+  </div>
+</div>
+
+<div class="cert-card" onclick="openCert('Preparing Data for Analysis with Microsoft Excel', 'https://drive.google.com/file/d/1VnTyRk_yrVM0mzvcm0N0MRAUAQgoErei/preview', 'https://drive.google.com/uc?export=download&id=1VnTyRk_yrVM0mzvcm0N0MRAUAQgoErei')">
+  <div class="cert-thumb">
+    <img src="certificates/sertif4.png" alt="Preparing Data Excel" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="cert-thumb-placeholder" style="display:none"><i class="fas fa-certificate"></i></div>
+  </div>
+  <div class="cert-body">
+    <h4>Preparing Data for Analysis with Microsoft Excel</h4>
+    <div class="cert-meta">Microsoft / Coursera · Sep 28, 2025 · coursera.org/verify/Y8N12QN7OPPB</div>
+    <button class="cert-view-btn">View Certificate</button>
+  </div>
+</div>  
+    <div class="cert-card" onclick="openCert('Comprehensive SQL Mastery', 'https://drive.google.com/file/d/1RabPLcsYWLCgAHPpBlMymfgVbhZTwc5b/preview', 'https://drive.google.com/uc?export=download&amp;id=1RabPLcsYWLCgAHPpBlMymfgVbhZTwc5b')">
+      <div class="cert-thumb">
+        <img src="certificates/sertif5.png" alt="SQL Mastery" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="cert-thumb-placeholder" style="display:none"><i class="fas fa-certificate"></i></div>
+      </div>
+      <div class="cert-body">
+        <h4>Comprehensive SQL Mastery</h4>
+        <div class="cert-meta">SmartPath · 20 August 2025 · 035/SP/VIII/2025</div>
+        <button class="cert-view-btn">View Certificate</button>
+      </div>
+    </div>
+ 
+    <div class="cert-card" onclick="openCert('Bootcamp Data Analyst', 'https://drive.google.com/file/d/11w8fnLLrl1kTyiWylzaSy0zxa56sd0s8/preview', 'https://drive.google.com/uc?export=download&amp;id=11w8fnLLrl1kTyiWylzaSy0zxa56sd0s8')">
+      <div class="cert-thumb">
+        <img src="certificates/sertif6.png" alt="Data Analyst Bootcamp" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="cert-thumb-placeholder" style="display:none"><i class="fas fa-certificate"></i></div>
+      </div>
+      <div class="cert-body">
+        <h4>Bootcamp Data Analyst</h4>
+        <div class="cert-meta">Special Skill Indonesia · 20 April 2025 · SSB09G035</div>
+        <button class="cert-view-btn">View Certificate</button>
+      </div>
+    </div>
+ 
+    <div class="cert-card" onclick="openCert('Data Engineering Mini Bootcamp Batch 7', 'https://drive.google.com/file/d/1ZsyO_0PwIoGDcXJWfmKA6U9K-EMzfBae/preview', 'https://drive.google.com/uc?export=download&amp;id=1ZsyO_0PwIoGDcXJWfmKA6U9K-EMzfBae')">
+      <div class="cert-thumb">
+        <img src="certificates/sertif7.png" alt="Data Engineering Bootcamp" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="cert-thumb-placeholder" style="display:none"><i class="fas fa-certificate"></i></div>
+      </div>
+      <div class="cert-body">
+        <h4>Data Engineering Mini Bootcamp Batch 7</h4>
+        <div class="cert-meta">rubythalib.ai Academy · April 6, 2026 · DEMB7-3-04042026</div>
+        <button class="cert-view-btn">View Certificate</button>
+      </div>
+    </div>
+ 
+    <div class="cert-card" onclick="openCert('Belajar Penerapan Data Science dengan Microsoft Fabric', 'https://drive.google.com/file/d/13OegvjcMMcwtL4tf86d6A7ok-1oW_AZu/preview', 'https://drive.google.com/uc?export=download&amp;id=13OegvjcMMcwtL4tf86d6A7ok-1oW_AZu')">
+      <div class="cert-thumb">
+        <img src="certificates/sertif8.png" alt="Microsoft Fabric" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="cert-thumb-placeholder" style="display:none"><i class="fas fa-certificate"></i></div>
+      </div>
+      <div class="cert-body">
+        <h4>Belajar Penerapan Data Science dengan Microsoft Fabric</h4>
+        <div class="cert-meta">Dicoding Indonesia · 28 Oktober 2025 · N9ZO22Q86PG5</div>
+        <button class="cert-view-btn">View Certificate</button>
+      </div>
+    </div>
+<div class="cert-card" onclick="openCert('Classifying &amp; Summarizing Data Using IBM Granite', 'https://drive.google.com/file/d/1qPOSrGff845JOT_zNaJUwZGKp4lbfO7z/preview', 'https://drive.google.com/uc?export=download&amp;id=1qPOSrGff845JOT_zNaJUwZGKp4lbfO7z')">
+      <div class="cert-thumb">
+        <img src="certificates/sertif9.png" alt="IBM Granite Classify" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="cert-thumb-placeholder" style="display:none"><i class="fas fa-certificate"></i></div>
+      </div>
+      <div class="cert-body">
+        <h4>Classifying & Summarizing Data Using IBM Granite</h4>
+        <div class="cert-meta">IBM SkillsBuild · Sep 2025</div>
+        <button class="cert-view-btn">View Certificate</button>
+      </div>
+    </div>
+    <div class="cert-card" onclick="openCert('EF SET English Certificate — B2 Upper Intermediate', 'https://drive.google.com/file/d/1f7E_acxqKdw6Tq3w-cQi1PhMk3hVgokw/preview', 'https://drive.google.com/uc?export=download&amp;id=1f7E_acxqKdw6Tq3w-cQi1PhMk3hVgokw')">
+      <div class="cert-thumb">
+        <img src="certificates/sertif10.png" alt="EF SET" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="cert-thumb-placeholder" style="display:none"><i class="fas fa-certificate"></i></div>
+      </div>
+      <div class="cert-body">
+        <h4>EF SET English Certificate — B2 Upper Intermediate (60/100)</h4>
+        <div class="cert-meta">EF SET · 07-08-2025 · Reading C1, Listening B2</div>
+        <button class="cert-view-btn">View Certificate</button>
+      </div>
+    </div>
+ 
+    <div class="cert-card" onclick="openCert('International Business Seminar — Excel Mastery for Professionals', 'https://drive.google.com/file/d/1MkYsEPOXgGMHZQzHnge4e2OFCjq1C1v9/preview', 'https://drive.google.com/uc?export=download&amp;id=1MkYsEPOXgGMHZQzHnge4e2OFCjq1C1v9')">
+      <div class="cert-thumb">
+        <img src="certificates/sertif11.png" alt="Excel Mastery" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="cert-thumb-placeholder" style="display:none"><i class="fas fa-certificate"></i></div>
+      </div>
+      <div class="cert-body">
+        <h4>International Business Seminar — Excel Mastery for Professionals</h4>
+        <div class="cert-meta">Business Education · 27 April 2025 · 028/Pst-IBS167/IV/2025</div>
+        <button class="cert-view-btn">View Certificate</button>
+      </div>
+    </div>
+<div class="cert-card" onclick="openCert('Transkrip Nilai - AI Agent for Data Analyst', 'https://drive.google.com/file/d/1doh9bZKs6i2pg5k-noNwTljwe6lAtFYL/preview', 'https://drive.google.com/uc?export=download&id=1doh9bZKs6i2pg5k-noNwTljwe6lAtFYL')">
+  <div class="cert-thumb">
+    <img src="certificates/sertif12.png" alt="Transkrip Nilai - AI Agent for Data Analyst" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="cert-thumb-placeholder" style="display:none"><i class="fas fa-certificate"></i></div>
+  </div>
+  <div class="cert-body">
+    <h4>Transkrip Nilai - AI Agent for Data Analyst</h4>
+    <div class="cert-meta">Transkrip Nilai</div>
+    <button class="cert-view-btn">View Certificate</button>
+  </div>
+</div>
+    <div class="cert-card" onclick="openCert('Certificate of Achievement — Hackathon Retail Crisis &amp; Recovery (Top 100, Rank #88/464)', 'https://drive.google.com/file/d/1lfbt5-Rfq6tfjHMaC_had0-l99UxfkCj/preview', 'https://drive.google.com/uc?export=download&amp;id=1lfbt5-Rfq6tfjHMaC_had0-l99UxfkCj')">
+      <div class="cert-thumb">
+        <img src="certificates/sertif13.png" alt="Hackathon DQLab" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="cert-thumb-placeholder" style="display:none"><i class="fas fa-certificate"></i></div>
+      </div>
+      <div class="cert-body">
+        <h4>Certificate of Achievement — Hackathon Retail Crisis & Recovery (Top 100, Rank #88/464)</h4>
+        <div class="cert-meta">DQLab · 9 May 2026 · #DQLABHCK100V2UKVSEQ</div>
+        <button class="cert-view-btn">View Certificate</button>
+      </div>
+    </div>
+ 
+    <div class="cert-card" onclick="openCert('Student Transcript — Data Classification &amp; Summarization (IBM SkillsBuild x Hacktiv8)', 'https://drive.google.com/file/d/12vdkBmxI0Lu3afrMpXmsfy9O4aETUihw/preview', 'https://drive.google.com/uc?export=download&amp;id=12vdkBmxI0Lu3afrMpXmsfy9O4aETUihw')">
+      <div class="cert-thumb">
+        <img src="certificates/sertif14.png" alt="Student Transcript IBM" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="cert-thumb-placeholder" style="display:none"><i class="fas fa-certificate"></i></div>
+      </div>
+      <div class="cert-body">
+        <h4>Student Transcript — Data Classification & Summarization</h4>
+        <div class="cert-meta">IBM SkillsBuild x Hacktiv8 · Dec 2025 · ID: 01511/H8/CSR/SDI/XII/2025</div>
+        <button class="cert-view-btn">View Certificate</button>
+      </div>
+    </div>
+ 
+  </div>
+</section>
+
+<!-- Certificate viewer modal -->
+<div class="cert-modal-overlay" id="certModalOverlay" onclick="closeCertOutside(event)">
+  <div class="cert-modal">
+    <div class="cert-modal-header">
+      <button class="cert-modal-close" onclick="closeCert()"><i class="fas fa-times"></i></button>
+      <h3 id="certModalTitle"></h3>
+    </div>
+    <div class="cert-modal-body" id="certModalBody">
+      <img id="certModalImg" src="" alt="Certificate">
+    </div>
+    <div class="cert-modal-footer">
+      <a id="certModalDl" href="#" target="_blank" class="cert-dl-btn">
+        <i class="fas fa-download"></i> Download PDF
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact">
+  <div class="section-script">Contact Me</div>
+  <p>Terbuka untuk kolaborasi, kesempatan kerja, dan diskusi seputar data & teknologi. Jangan ragu untuk menghubungi!</p>
+  <div class="contact-socials">
+    <a href="https://wa.me/6285746707251" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.linkedin.com/in/nabila-hulwana-109016286/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://github.com/nabilahlw/" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="mailto:nabila.hlwana@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Nabila Hulwana Zuhud &nbsp;·&nbsp; All rights reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
