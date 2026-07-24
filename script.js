@@ -45,7 +45,7 @@ const projects = {
     title: 'FHV Vehicle Trip in NYC Analysis & Prediction',
     cat: 'Data Analysis',
     catFilter: 'data',
-    desc: `Data sourced from the New York City Taxi and Limousine Commission (TLC) — official NYC.gov website.\n\n<b>Business Objective:</b> Optimize driver allocation and pricing strategies to improve the operational efficiency of FHV services (Uber & Lyft), which handle over 600,000 trips per day.\n\n<b>Focus Areas:</b>\n1. Data cleaning and analysis using SQL & Python\n2. Building a Machine Learning model to predict trip duration\n3. Creating an interactive Tableau dashboard comparing Uber & Lyft performance\n4. Trip prediction, peak hour analysis, average driver earnings, daily order volume, and pickup/dropoff zone distribution\n5. Key insights: peak hours, busiest zones, and optimal driver allocation`,
+    desc: `Data sourced from the New York City Taxi and Limousine Commission (TLC). Data source: official NYC.gov website.\n\n<b>Business Objective:</b> Optimize driver allocation and pricing strategy to improve operational efficiency for FHV services (Uber & Lyft) serving over 600,000 trips per day.\n\n<b>Focus:</b>\n1. Data cleaning and analysis using SQL & Python\n2. Building a Machine Learning model to predict trip duration\n3. Creating an interactive Tableau dashboard for comparative analysis of Uber & Lyft services\n4. Trip prediction, peak-hour analysis, average driver pay, daily order volume, pickup and drop-off zone distribution\n5. Key insight: peak hours, busiest zones, and driver allocation`,
     tech: ['Python','SQL','Tableau'],
     links: [
       { label: 'PPT', icon: 'fas fa-file-powerpoint', url: 'https://drive.google.com/file/d/1p9wDmf0Gp6D4YEnL0laxI8uhOPwShsfV/view?usp=sharing' },
@@ -68,7 +68,7 @@ const projects = {
     title: 'HR Attrition Analysis',
     cat: 'Data Analysis',
     catFilter: 'data',
-    desc: `<b>Objective:</b> Identify the key factors driving high employee attrition (resignation rates).\n\n<b>Methodology:</b>\n• Dataset: IBM HR Analytics from Kaggle (1,470 employee records)\n• Data cleaning, handling missing values & duplicates, and feature engineering using Python (Pandas)\n• Statistical analysis and data visualization using Pandas, Seaborn, Matplotlib, and Excel\n• Built an interactive Power BI dashboard for operational insights\n\n<b>Key Insights:</b>\n• Low Income: 55% of attrition comes from employees earning under $2,000/month\n• Young Age Group: Employees aged 18–26 have the highest resignation rate\n• Job Role & Tenure: Entry-level roles like Sales Executive and Lab Technician show high turnover\n• Work-Life Balance: Low WLB and Environment Satisfaction scores are strong resignation predictors\n• Marital Status: Single employees carry a higher resignation risk`,
+    desc: `<b>Objective:</b> Identify the main factors driving high attrition (resignation).\n\n<b>Analysis Methodology:</b>\n• Used the IBM HR Analytics dataset from Kaggle (1,470 employee records)\n• Data cleaning, handling missing values & duplicate data, and feature engineering using Python (Pandas)\n• Statistical analysis and data visualization using Pandas, Seaborn, Matplotlib, and Excel\n• Built an interactive dashboard using Power BI for operational insights\n\n<b>Key Insights:</b>\n• Low Income: 55% of attrition comes from employees earning < $2,000\n• Younger Age Group: Ages 18–26 have the highest resignation rate\n• Job Role & Tenure: Entry-level positions such as Sales Executive and Lab Technician have high turnover\n• Work-Life Balance: Low WLB and Environment Satisfaction scores are strong resignation factors\n• Marital Status: Single employees have a higher resignation risk`,
     tech: ['Python','SQL','Power BI','Excel','GitHub'],
     links: [
       { label: 'PPT', icon: 'fas fa-file-powerpoint', url: 'https://drive.google.com/file/d/1lrkkQ0Os66MAdBX2xEvuluNdFhYn3v1Q/view?usp=sharing' },
@@ -76,17 +76,17 @@ const projects = {
       { label: 'Power BI Dashboard', icon: 'fas fa-chart-bar', url: 'https://drive.google.com/file/d/1EXKROfxeIs3ftUMMWxpANOcGnSTekh0J/view?usp=sharing' },
     ],
     media: [
+      { type: 'img', src: 'myprojects/hranalisis/hr4.png' },
       { type: 'img', src: 'myprojects/hranalisis/hr1.png' },
       { type: 'img', src: 'myprojects/hranalisis/hr2.png' },
       { type: 'img', src: 'myprojects/hranalisis/hr3.png' },
-      { type: 'img', src: 'myprojects/hranalisis/hr4.png' },
       { type: 'img', src: 'myprojects/hranalisis/hr5.png' },
       { type: 'img', src: 'myprojects/hranalisis/hr6.png' },
       { type: 'img', src: 'myprojects/hranalisis/hr7.png' },
       { type: 'img', src: 'myprojects/hranalisis/hr8.png' },
       { type: 'img', src: 'myprojects/hranalisis/hr9.png' },
       { type: 'img', src: 'myprojects/hranalisis/hr10.png' },
-      { type: 'pdf', src: 'myprojects/hranalisis/ppt - HR Attrition.pdf', label: 'Download PPT PDF' },
+      { type: 'pdf', src: 'myprojects/hranalisis/PPT - HR Attrition Analysis.pdf', label: 'Download PPT PDF' },
     ]
   },
 
@@ -94,7 +94,7 @@ const projects = {
     title: 'Optimization of Airbnb LA Analysis with AI Agent IBM Granite',
     cat: 'Data Analysis · AI',
     catFilter: 'data',
-    desc: `Quantitative & Qualitative Analysis of Airbnb Los Angeles listings (June 2025) to determine pricing strategies, competitive advantages, and AI-based classification.\n\n<b>Dataset:</b> 32,442 Airbnb Los Angeles listings (79 columns)\n\n<b>Analysis Process:</b>\n• Data cleaning, price normalization, and handling missing values\n• EDA and data querying using Pandas Agent\n• Used IBM Granite for AI-based classification from listing descriptions:\n  — Guest type (Solo, Family, Business)\n  — Host type (Elite/Superhost, Professional)\n  — Booking policy type (Strict/Flexible)\n• Visualization of profit analysis, demand trends, price distribution, and revenue by room type\n\n<b>Key Insights:</b>\n• Market segmentation between premium areas (Bel-Air, Malibu) and high-volume areas\n• 50% of listings priced within the competitive range of $107–$228 per night\n• High-quality hosts (Superhost, 100% response rate) achieve the highest occupancy\n• Listings categorized as "Business" or "Couple" by AI can command above-market pricing`,
+    desc: `Quantitative & Qualitative Analysis of Airbnb Los Angeles Properties (June 2025) to determine pricing strategy, competitive advantages, and AI-based classification.\n\n<b>Data:</b> 32,442 Airbnb Los Angeles listings (79 data columns)\n\n<b>Analysis Process:</b>\n• Performed data cleaning, price normalization, and handling of missing values\n• EDA and data querying using a Pandas Agent\n• Used IBM Granite for AI-based classification from listing descriptions:\n  — Guest type (Solo, Family, Business)\n  — Host type (Elite/Superhost, Professional)\n  — Booking rule type (Strict/Flexible)\n• Visualized profit, demand, price distribution, and room-type revenue analysis\n\n<b>Key Insights:</b>\n• Market segmentation between premium areas (Bel-Air, Malibu) and high-volume areas\n• 50% of listing prices fall in the competitive range of $107–$228 per night\n• High-quality hosts (Superhost, 100% response rate) have the highest occupancy\n• Listings with the AI category "Business" or "Couple" can price above the market average`,
     tech: ['IBM Granite','LangChain','Python','Pandas'],
     links: [
       { label: 'Kaggle', icon: 'fas fa-code', url: 'https://www.kaggle.com/code/nabilahulwana/analysis-of-airbnb-la-using-ibm-granite' },
@@ -106,18 +106,18 @@ const projects = {
       { type: 'img', src: 'myprojects/airbnb/airbnb3.png' },
       { type: 'img', src: 'myprojects/airbnb/airbnb4.png' },
       { type: 'img', src: 'myprojects/airbnb/airbnb5.png' },
-      { type: 'pdf', src: 'myprojects/airbnb/PPT Capstone Projects.pdf', label: 'Download PPT PDF' },
+      { type: 'pdf', src: 'myprojects/airbnb/PPT-AIRBNB-IBM-GRANITE.pdf', label: 'Download PPT PDF' },
     ]
   },
 
   p4: {
-    title: 'DQFashion Sales Analysis 2017: Transaction & Revenue',
+    title: 'DQFashion Sales Analysis 2017 : Transaction & Revenue',
     cat: 'Data Analysis',
     catFilter: 'data',
-    desc: `<b>Project Objective:</b> Analyze sales patterns, branch performance, and product categories to support data-driven business strategy.\n\n<b>Dataset:</b> 118,000+ sales transactions across 4 branches in Indonesia\n<b>Tools:</b> Power Query, Power Pivot, PivotTable, Excel Dashboard\n\n<b>Key Insights:</b>\n• Total 2017 revenue reached IDR 59.9 Billion from 396 transactions and 236,000+ units sold\n• Sales peaked in June driven by Eid al-Fitr momentum; February recorded the lowest sales\n• Dress/Gown category generated the highest revenue; accessories had high volume but low revenue\n• Jakarta branch led in transaction count; Medan branch had the highest average transaction value\n• Sales patterns show significant weekend uplift, especially on Sundays\n\n<b>Business Target:</b> Projected revenue growth from IDR 59.9B to IDR 73B (+22%) in 2018 through promotional strategies, product bundling, and branch optimization.`,
+    desc: `<b>Project Objective:</b> Analyze sales patterns, branch performance, and product categories to support data-driven business strategy.\n\n<b>Data:</b> 118,000+ sales transactions from 4 branches in Indonesia\n<b>Tools:</b> Power Query, Power Pivot, PivotTable, Excel Dashboard\n\n<b>Key Insights:</b>\n• Total 2017 revenue reached IDR 59.9 billion from 396 transactions and 236,000 products sold\n• Sales peaked in June due to the Eid al-Fitr momentum, while February was the lowest month\n• The Dress category generated the highest revenue, while accessories had high volume but low revenue\n• The Jakarta branch led in number of transactions, while Medan had the largest transaction value\n• Sales patterns showed a significant increase on weekends, especially Sundays\n\n<b>Business Target:</b> Projected revenue growth for 2018 from IDR 59.9B to IDR 73 billion (+22%) through promotion strategies, bundling, and branch optimization.`,
     tech: ['Excel','Power Query','Power Pivot','DAX'],
     links: [
-      { label: 'Dashboard Excel', icon: 'fas fa-file-excel', url: 'https://docs.google.com/spreadsheets/d/17QrRXMXzql1refVmZ3UsJkgw5d6Khfwq/edit?usp=sharing' },
+      { label: 'Excel Dashboard', icon: 'fas fa-file-excel', url: 'https://docs.google.com/spreadsheets/d/17QrRXMXzql1refVmZ3UsJkgw5d6Khfwq/edit?usp=sharing' },
       { label: 'PPT', icon: 'fas fa-file-powerpoint', url: 'https://drive.google.com/file/d/1pDiMcr2Yc9nKKiCqYnEa4iluJCrhpHTg/view?usp=sharing' },
     ],
     media: [
@@ -133,17 +133,19 @@ const projects = {
     title: 'Python Hackathon: DQLab Retail Crisis & Recovery',
     cat: 'Data Analysis · Hackathon',
     catFilter: 'data',
-    desc: `<b>Project:</b> Automated Sales Pipeline & Market Basket Analysis\n<b>Tools:</b> Python (Pandas, Mlxtend, Matplotlib), Openpyxl\n<b>Dataset:</b> 6-month retail transaction data (DQFresh Mart)\n\n<b>Project Objective:</b> Reverse a 6-month sales decline by detecting consistently growing niche products (Rising Stars) and recommending bundling strategies.\n\n<b>Pipeline & Methodology:</b>\n• Rising Star Detection: Used 3-day Moving Average. Products flagged if they showed a consecutive upward trend for more than 12 days, then ranked by Growth % and normalized to Base 100\n• Potential Packaging: Applied Apriori algorithm (Association Rules) on a transaction basket matrix with parameters: min_support 1%, Lift > 2, with at least one item being a Rising Star product\n\n<b>Output:</b>\n• retail_insight.xlsx: Excel file with 2 sheets — full Rising Star list and Potential Packaging recommendations\n• rising_star_index.png: Relative growth line chart (Base 100)\n• rising_star_actual.png: Actual sales value line chart`,
+    desc: `<b>Project:</b> Automated Sales Pipeline & Market Basket Analysis\n<b>Tools:</b> Python (Pandas, Mlxtend, Matplotlib), Openpyxl\n<b>Data:</b> Retail transactions from the last 6 months (DQFresh Mart)\n\n<b>Project Objective:</b> Reverse the sales decline trend of the last 6 months by detecting small products with consistent growth (Rising Star) and determining a bundling strategy.\n\n<b>Pipeline & Methodology:</b>\n• Rising Star Detection: Uses a 3-day Moving Average. Products are filtered if they show a consecutive upward trend > 12 days, then Growth % is calculated and normalized to Base 100\n• Potential Packaging: Uses the Apriori Algorithm (Association Rules) on the transaction basket matrix with parameters min_support 1%, Lift > 2, and at least one item being a Rising Star product\n\n<b>Output:</b>\n• retail_insight.xlsx: Excel file with 2 sheets — the full Rising Star list and Potential Packaging recommendations\n• rising_star_index.png: Line chart of relative growth (Base 100)\n• rising_star_actual.png: Line chart of actual sales value`,
     tech: ['Python','Pandas','Mlxtend','Openpyxl','Matplotlib'],
     links: [
       { label: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/nabilahlw/DQLabHackathon-RetailCrisisRecovery.git' },
       { label: 'LinkedIn Post', icon: 'fab fa-linkedin', url: 'https://www.linkedin.com/posts/nabila-hulwana_dqlab-python-hackathon-ugcPost-7467843472805236737-F7gN/' },
     ],
     media: [
+      { type: 'img', src: 'myprojects/hackathondqlab/poster.png' },
       { type: 'img', src: 'myprojects/hackathondqlab/index.png' },
       { type: 'img', src: 'myprojects/hackathondqlab/actual.png' },
-      { type: 'pdf', src: 'myprojects/hackathondqlab/ppy python hackathon.pdf', label: 'Download PPT PDF' },
-      { type: 'pdf', src: 'myprojects/hackathondqlab/Hackathon Questions.pdf', label: 'Download Hackathon Questions' },
+      { type: 'pdf', src: 'myprojects/hackathondqlab/ppt python hackathon.pdf', label: 'Download PPT' },
+      { type: 'pdf', src: 'myprojects/hackathondqlab/certificate of Achievement - Hackaton Retail Crisis & Recovery Visualization Challenge using Python - DQLab.pdf', label: 'Download Sertifikat' },
+      { type: 'pdf', src: 'myprojects/hackathondqlab/Hackathon Questions.pdf', label: 'Download Hackathon Brief' },
     ]
   },
 
@@ -201,14 +203,49 @@ const projects = {
       { type: 'img', src: 'myprojects/keretain/kereta5.png' },
       { type: 'img', src: 'myprojects/keretain/kereta6.png' },
     ]
+  },
+
+  p9: {
+    title: 'Integrated Campus System (SIAKAD, SIMPEG & SIKEU)',
+    cat: 'Web Development',
+    catFilter: 'app',
+    desc: `<b>App Objective:</b> Integration of 3 campus academic systems (SIAKAD, SIMPEG, SIKEU), each with its own separate MySQL database, so data across systems can be read from one another in real time.\n\n<b>Key Features:</b>\n• SIAKAD: student, lecturer, and course data management\n• SIMPEG: employee and position data management\n• SIKEU: student billing management with online payment via Midtrans Snap\n• Cross-database Eloquent Relationship to read data across systems (e.g. SIKEU displays student data from SIAKAD)\n• Auto-generated unique codes for each entity (student ID, lecturer ID, billing code, etc.)\n\n<b>Tools & Technology:</b>\n• Laravel (multi-database connection)\n• MySQL (3 separate databases: siakad, simpeg, sikeu)\n• Midtrans Snap (payment gateway)\n• Eloquent ORM`,
+    tech: ['Laravel','PHP','MySQL','Midtrans'],
+    links: [{ label: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/nabilahlw/integrated-campus-information-system.git' }],
+    media: [
+      { type: 'img', src: 'myprojects/sistemintegrasi/images/dashboardsiakad.png' },
+      { type: 'img', src: 'myprojects/sistemintegrasi/images/dashboard2_sikeu.png' },
+      { type: 'img', src: 'myprojects/sistemintegrasi/images/form_jabatan.png' },
+      { type: 'img', src: 'myprojects/sistemintegrasi/images/form_pegawai.png' },
+      { type: 'img', src: 'myprojects/sistemintegrasi/images/form_mhs.png' },
+      { type: 'img', src: 'myprojects/sistemintegrasi/images/tabel1.png' },
+      { type: 'img', src: 'myprojects/sistemintegrasi/images/tabel2.png' },
+      { type: 'pdf', src: 'myprojects/sistemintegrasi/dokumentasi-sistemintegrasi.pdf', label: 'Download Documentation PDF' },
+    ]
+  },
+  p10: {
+    title: 'WhatsApp Documentation Automation Bot',
+    cat: 'Automation & Bot Development',
+    catFilter: 'app',
+    desc: `<b>App Objective:</b> Build an AI-based automated WhatsApp bot that receives activity documentation photos/videos from a WhatsApp Group, intelligently classifies the school name & class (including tolerance for typos/new words), and automatically uploads them into a structured Google Drive folder hierarchy.\n\n<b>Key Features:</b>\n• <b>Strict & AI-Powered Smart Normalization:</b> A high-precision string processing algorithm that reads the education level (elementary/middle school), school name, and class code. Includes fuzzy matching to auto-correct typos (e.g. "Hebit/Hebut" → "Hebat"), plus the ability to dynamically create new folders when a new school name is detected.\n• <b>Auto-Folder Hierarchy in Google Drive:</b> Automatically creates and organizes folders in Google Drive based on class name and the current month-year (Parent Folder → Class Name → Month-Year → File).\n• <b>Multi-Media Handler:</b> Supports image and video uploads with dynamic file-format extraction (JPEG, PNG, MP4, MOV, etc.) and timeout protection.\n• <b>WhatsApp Session & Group Listener:</b> Session persistence integration using LocalAuth to monitor incoming messages from the target group in real time.\n• <b>Auto Reply with Interactive Path:</b> Sends an automatic response on WhatsApp after a successful upload, including the folder's path location in Google Drive.`,
+    tech: ['Node.js','Google Drive API','Gemini AI'],
+    links: [
+      { label: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/nabilahlw/documentation-automation-whatsapp-web.js.git' },
+      { label: 'Demo Video', icon: 'fas fa-play-circle', url: 'https://drive.google.com/file/d/1mJBEVsjqIqzRrnYgQi2r6_dWnk7NWzKJ/view?usp=drive_link' },
+    ],
+    media: [
+      { type: 'img', src: 'myprojects/whatsapp-bot/bot1.png' },
+      { type: 'img', src: 'myprojects/whatsapp-bot/bot2.png' },
+      { type: 'img', src: 'myprojects/whatsapp-bot/bot3.png' },
+      { type: 'img', src: 'myprojects/whatsapp-bot/bot4.png' },
+    ]
   }
+
 };
 
 /* ═══════════════════════════════════════════════════
-   PROJECT PAGES / PAGINATION
+   PROJECT GRID (single page, scroll down)
 ═══════════════════════════════════════════════════ */
-let currentPage = 0;
-const ITEMS_PER_PAGE = 6;
 let activeFilter = 'all';
 let filteredKeys = [];
 
@@ -220,52 +257,26 @@ function getFilteredKeys() {
 
 function renderProjects() {
   filteredKeys = getFilteredKeys();
-  currentPage = 0;
-
-  const totalPages = Math.ceil(filteredKeys.length / ITEMS_PER_PAGE);
   const pagesEl = document.getElementById('projPages');
-  const dotsEl  = document.getElementById('projDots');
 
   let html = '';
-  for (let p = 0; p < totalPages; p++) {
-    const pageKeys = filteredKeys.slice(p * ITEMS_PER_PAGE, (p + 1) * ITEMS_PER_PAGE);
-    html += `<div class="proj-page">`;
-    pageKeys.forEach(k => {
-      const proj = projects[k];
-      const thumb = proj.media.find(m => m.type === 'img');
-      const thumbSrc = thumb ? thumb.src : '';
-      html += `
-        <div class="proj-card" onclick="openModal('${k}')">
-          <div class="proj-thumb-wrap">
-            <img src="${thumbSrc}" onerror="this.style.display='none'" alt="${proj.title}">
-            <div class="proj-title-overlay">${proj.title}</div>
-          </div>
-          <div class="proj-body">
-            <span class="proj-cat-badge">${proj.cat}</span>
-            <h3>${proj.title}</h3>
-          </div>
-        </div>`;
-    });
-    const empty = ITEMS_PER_PAGE - pageKeys.length;
-    for (let e = 0; e < empty; e++) html += `<div></div>`;
-    html += `</div>`;
-  }
+  filteredKeys.forEach(k => {
+    const proj = projects[k];
+    const thumb = proj.media.find(m => m.type === 'img');
+    const thumbSrc = thumb ? thumb.src : '';
+    html += `
+      <div class="proj-card" onclick="openModal('${k}')">
+        <div class="proj-thumb-wrap">
+          <img src="${thumbSrc}" onerror="this.style.display='none'" alt="${proj.title}">
+        </div>
+        <div class="proj-body">
+          <span class="proj-cat-badge">${proj.cat}</span>
+          <h3>${proj.title}</h3>
+          <p class="proj-tech-preview">${proj.tech.join(' · ')}</p>
+        </div>
+      </div>`;
+  });
   pagesEl.innerHTML = html;
-
-  let dotsHtml = '';
-  for (let i = 0; i < totalPages; i++) {
-    dotsHtml += `<button class="proj-dot ${i===0?'active':''}" onclick="goPage(${i})">${i+1}</button>`;
-  }
-  dotsEl.innerHTML = dotsHtml;
-
-  goPage(0);
-}
-
-function goPage(n) {
-  currentPage = n;
-  const pagesEl = document.getElementById('projPages');
-  pagesEl.style.transform = `translateX(-${n * 100}%)`;
-  document.querySelectorAll('.proj-dot').forEach((d,i) => d.classList.toggle('active', i===n));
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -375,6 +386,8 @@ function getTechIcon(name) {
     'CSS':            'devicon-css3-plain colored',
     'JavaScript':     'devicon-javascript-plain colored',
     'MySQL':          'devicon-mysql-plain colored',
+    'Laravel':        'devicon-laravel-plain colored',
+    'Midtrans':       'fas fa-credit-card',
     'PostgreSQL':     'devicon-postgresql-plain colored',
     'PySpark':        'devicon-apachespark-plain colored',
     'dbt':            'fas fa-layer-group',
@@ -394,13 +407,103 @@ function getTechIcon(name) {
     'Power Pivot':    'fas fa-cubes',
     'DAX':            'fas fa-function',
     'Android Studio': 'fab fa-android',
+    'Node.js':        'devicon-nodejs-plain colored',
   };
   return map[name] || 'fas fa-code';
 }
 
+
 /* ═══════════════════════════════════════════════════
    CERTIFICATES MODAL
 ═══════════════════════════════════════════════════ */
+const CERTS = [
+  { title: 'SmartPath Bootcamp — Advanced Tableau: Data Storytelling & Geospatial Visualization',
+    file: 'certificates/Certificate - Advanced Tableau - SmartPath.jpg',
+    isImg: true,
+    dl: 'https://drive.google.com/file/d/1FitDy0euaLKGKZa-jCuEpqRA9xQW-EkA/view?usp=sharing' },
+
+  { title: 'Belajar Dasar Cloud dan Gen AI di AWS — Dicoding',
+    file: 'certificates/Certificate - Belajar Dasar Cloud & Gen AI di AWS - Dicoding.pdf',
+    isImg: false,
+    dl: 'https://drive.google.com/file/d/1RabPLcsYWLCgAHPpBlMymfgVbhZTwc5b/view?usp=sharing' },
+
+  { title: 'Classifying & Summarizing Data Using IBM Granite — IBM SkillsBuild',
+    file: 'certificates/Certificate - Classifying Data Using IBM Granite - IBM SkillsBuild.pdf',
+    isImg: false,
+    dl: 'https://drive.google.com/file/d/11w8fnLLrl1kTyiWylzaSy0zxa56sd0s8/view?usp=sharing' },
+
+  { title: 'SmartPath Bootcamp — Comprehensive SQL Mastery',
+    file: 'certificates/Certificate - Comprehensive SQL Mastery - SmartPath.jpg',
+    isImg: true,
+    dl: 'https://drive.google.com/file/d/1ZsyO_0PwIoGDcXJWfmKA6U9K-EMzfBae/view?usp=sharing' },
+
+  { title: 'Bootcamp Data Analyst — Special Skill Indonesia',
+    file: 'certificates/Certificate - Data Analyst Bootcamp - Special Skill.pdf',
+    isImg: false,
+    dl: 'https://drive.google.com/file/d/13OegvjcMMcwtL4tf86d6A7ok-1oW_AZu/view?usp=sharing' },
+
+  { title: 'Data Engineering Mini Bootcamp Batch 7 — rubythalib.ai',
+    file: 'certificates/Certificate - Data Engineering Bootcamp - rubythalib.pdf',
+    isImg: false,
+    dl: 'https://drive.google.com/file/d/1qPOSrGff845JOT_zNaJUwZGKp4lbfO7z/view?usp=sharing' },
+
+  { title: 'Belajar Penerapan Data Science dengan Microsoft Fabric — Dicoding',
+    file: 'certificates/Certificate - Data Science dengan Microsoft Fabric - Dicoding.pdf',
+    isImg: false,
+    dl: 'https://drive.google.com/file/d/1VbzMMW02c1rI98VttQri2od3dx-a4RNg/view?usp=sharing' },
+
+  { title: 'Data Summarization & Classification Using IBM Granite — IBM SkillsBuild',
+    file: 'certificates/Certificate - DataSummmarization&Classification - IBM SkillsBuild.pdf',
+    isImg: false,
+    dl: 'https://drive.google.com/file/d/1edbxx5RtR6Uvh0_kYVHwAmDOEhQsXz9G/view?usp=sharing' },
+
+  { title: 'EF SET English Certificate — B2 Upper Intermediate (60/100)',
+    file: 'certificates/Certificate - EF SET English Certificate B2.pdf',
+    isImg: false,
+    dl: 'https://drive.google.com/file/d/1f7E_acxqKdw6Tq3w-cQi1PhMk3hVgokw/view?usp=sharing' },
+
+  { title: 'ID/X Partners Data Engineering Project Based Internship Program',
+    file: 'certificates/Certificate of Completion-DataEng-RAKAMIN.pdf',
+    isImg: false,
+    dl: 'https://drive.google.com/file/d/1y83cEircqMBFgJMXc6ghzp6eMLW_YbaU/view?usp=sharing' },
+
+  { title: 'SmartPath Bootcamp — Excel Proficiency to Business Strategy',
+    file: 'certificates/Certificate - Excel Proficiency to Business Strategy - SmartPath.jpg',
+    isImg: true,
+    dl: 'https://drive.google.com/file/d/1IAdUKlO00ZTeQ5-MqCzuGxm9wDEQYOEO/view?usp=sharing' },
+
+  { title: 'Introduction to Data Engineering — IBM / Coursera',
+    file: 'certificates/Certificate - IntroTo Data Engineering - IBM Coursera.pdf',
+    isImg: false,
+    dl: 'https://drive.google.com/file/d/1VnTyRk_yrVM0mzvcm0N0MRAUAQgoErei/view?usp=sharing' },
+
+  { title: 'Preparing Data for Analysis with Microsoft Excel — Coursera',
+    file: 'certificates/Certificate - Preparing Data for Analysis with Excel - Coursera.pdf',
+    isImg: false,
+    dl: 'https://drive.google.com/file/d/10uPr3--f5sYse-UQfeIQdJCVnC7lZorC/view?usp=sharing' },
+
+  { title: 'Peserta Workshop StartUp Digital Open Source — Fikom UDB',
+    file: 'certificates/Certificate - StartUp Digital Open Source - Fikom UDB.jpg',
+    isImg: true,
+    dl: 'https://drive.google.com/file/d/1lfbt5-Rfq6tfjHMaC_had0-l99UxfkCj/view?usp=sharing' },
+
+  { title: 'Certificate of Achievement — Hackathon Retail Crisis & Recovery (Top 100, Rank #88/464)',
+    file: 'certificates/certificate of Achievement - Hackaton Retail Crisis & R...very Visualization Challenge using Python - DQLab.pdf',
+    isImg: false,
+    dl: 'https://drive.google.com/file/d/1_bxGeNfbSish9Lcyj2MtboVZfk_9SuXj/view?usp=sharing' },
+
+  { title: 'Bootcamp Data Analyst with Excel Batch 22 — DQLab (Sertifikat Kelulusan)',
+    file: 'certificates/Certificate of Completion - Bootcamp Data Analyst with Excel Batch 22 - DQLab.pdf',
+    isImg: false,
+    dl: 'https://drive.google.com/file/d/12vdkBmxI0Lu3afrMpXmsfy9O4aETUihw/view?usp=sharing' },
+
+  { title: 'Student Transcript — Data Classification & Summarization (IBM SkillsBuild x Hacktiv8)',
+    file: 'certificates/Student Transkip - Data Classification & Summarization Using IBM Granite - Hacktiv8 & IBM SkillsBuild.pdf',
+    isImg: false,
+    dl: 'https://drive.google.com/file/d/1VbzMMW02c1rI98VttQri2od3dx-a4RNg/view?usp=sharing' },
+];
+
+
 function openCert(title, previewUrl, downloadUrl) {
   document.getElementById('certModalTitle').textContent = title;
 
