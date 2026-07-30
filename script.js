@@ -239,7 +239,48 @@ const projects = {
       { type: 'img', src: 'myprojects/whatsapp-bot/bot3.png' },
       { type: 'img', src: 'myprojects/whatsapp-bot/bot4.png' },
     ]
-  }
+  },
+  p11: {
+  title: 'Integrated Clinic Information System',
+  cat: 'Enterprise Information System',
+  catFilter: 'app',
+  desc: `<b>Project Overview:</b> Designed and developed a web-based integrated clinic management system to digitalize and optimize end-to-end clinic operations, including patient registration, medical examinations, billing, online payments, and business analytics within a centralized platform.\n\n<b>Key Features:</b>\n• <b>Role-Based Access Control (RBAC):</b> Secure authentication and authorization for Administrator, Registration Staff, Doctor, Cashier, and Head of Clinic.\n• <b>Patient & Medical Record Management:</b> Full CRUD functionality for patients, doctors, employees, clinic departments (Poli), medical services, medicines, doctor schedules, examinations, diagnoses, prescriptions, and visit history.\n• <b>Billing & Payment Integration:</b> Automated invoice generation based on examination results with support for manual payments and Midtrans Sandbox integration using Snap API, webhook callbacks, and SHA-512 signature verification.\n• <b>Business Intelligence Dashboard:</b> Interactive analytics dashboard featuring clinic KPIs, revenue trends, patient visit statistics, Top 5 services, departments, diagnoses, complaints, shift distribution, and PDF/Excel report export.\n• <b>Enterprise System Integration:</b> Seamless integration between patient registration, medical examination, billing, payment gateway, and reporting modules, ensuring consistent real-time data across the entire clinic management system.`,
+  tech: [
+    'Laravel 12',
+    'PHP',
+    'MySQL',
+    'Midtrans API',
+    'Blade',
+    'AdminLTE',
+    'Chart.js'
+  ],
+  links: [
+    {
+      label: 'GitHub',
+      icon: 'fab fa-github',
+      url: 'https://github.com/nabilahlw/integrated-clinic-system.git'
+    },
+    {
+      label: 'Demo Video',
+      icon: 'fas fa-play-circle',
+      url: 'https://drive.google.com/file/d/1DyRJNCp9D8Prj58OhHP8pTIZheKkiaSs/view?usp=sharing'
+    },
+  ],
+  media: [
+    { type: 'img', src: 'myprojects/integrated-clinic-system/clinic1.png' },
+    { type: 'img', src: 'myprojects/integrated-clinic-system/clinic2.png' },
+    { type: 'img', src: 'myprojects/integrated-clinic-system/clinic3.png' },
+    { type: 'img', src: 'myprojects/integrated-clinic-system/clinic4.png' },
+    { type: 'img', src: 'myprojects/integrated-clinic-system/clinic5.png' },
+    { type: 'img', src: 'myprojects/integrated-clinic-system/clinic6.png' },
+    { type: 'img', src: 'myprojects/integrated-clinic-system/clinic7.png' },
+    { type: 'img', src: 'myprojects/integrated-clinic-system/clinic8.png' },
+    { type: 'img', src: 'myprojects/integrated-clinic-system/clinic9.png' },
+    { type: 'img', src: 'myprojects/integrated-clinic-system/clinic10.png' },
+    { type: 'img', src: 'myprojects/integrated-clinic-system/clinic11.png' },
+    { type: 'pdf', src: 'myprojects/integrated-clinic-system/dokumentasi-group-project.pdf', label: 'Project Documentation (PDF)' },
+  ]
+}
 
 };
 
