@@ -45,7 +45,7 @@ const projects = {
     title: 'FHV Vehicle Trip in NYC Analysis & Prediction',
     cat: 'Data Analysis',
     catFilter: 'data',
-    desc: `Data sourced from the New York City Taxi and Limousine Commission (TLC). Data source: official NYC.gov website.\n\n<b>Business Objective:</b> Optimize driver allocation and pricing strategy to improve operational efficiency for FHV services (Uber & Lyft) serving over 600,000 trips per day.\n\n<b>Focus:</b>\n1. Data cleaning and analysis using SQL & Python\n2. Building a Machine Learning model to predict trip duration\n3. Creating an interactive Tableau dashboard for comparative analysis of Uber & Lyft services\n4. Trip prediction, peak-hour analysis, average driver pay, daily order volume, pickup and drop-off zone distribution\n5. Key insight: peak hours, busiest zones, and driver allocation`,
+    desc: `Data comes from the New York City Taxi and Limousine Commission (TLC). Data source: official NYC.gov website.\n\n<b>Business Objective:</b> Optimize driver allocation and pricing strategy to improve the operational efficiency of FHV services (Uber & Lyft), which serve more than 600 thousand trips per day.\n\n<b>Focus:</b>\n1. Data cleaning and analysis using SQL & Python\n2. Building a Machine Learning model to predict trip duration\n3. Creating an interactive Tableau dashboard to compare Uber & Lyft services\n4. Trip prediction, peak-hour analysis, average driver pay, daily order volume, and pickup and drop-off zone distribution\n5. Key insights: peak hours, busiest zones, and driver allocation`,
     tech: ['Python','SQL','Tableau'],
     links: [
       { label: 'PPT', icon: 'fas fa-file-powerpoint', url: 'https://drive.google.com/file/d/1p9wDmf0Gp6D4YEnL0laxI8uhOPwShsfV/view?usp=sharing' },
@@ -68,7 +68,7 @@ const projects = {
     title: 'HR Attrition Analysis',
     cat: 'Data Analysis',
     catFilter: 'data',
-    desc: `<b>Objective:</b> Identify the main factors driving high attrition (resignation).\n\n<b>Analysis Methodology:</b>\n• Used the IBM HR Analytics dataset from Kaggle (1,470 employee records)\n• Data cleaning, handling missing values & duplicate data, and feature engineering using Python (Pandas)\n• Statistical analysis and data visualization using Pandas, Seaborn, Matplotlib, and Excel\n• Built an interactive dashboard using Power BI for operational insights\n\n<b>Key Insights:</b>\n• Low Income: 55% of attrition comes from employees earning < $2,000\n• Younger Age Group: Ages 18–26 have the highest resignation rate\n• Job Role & Tenure: Entry-level positions such as Sales Executive and Lab Technician have high turnover\n• Work-Life Balance: Low WLB and Environment Satisfaction scores are strong resignation factors\n• Marital Status: Single employees have a higher resignation risk`,
+    desc: `<b>Objective:</b> Identify the main factors behind high attrition (resignations).\n\n<b>Analysis Methodology:</b>\n• Used the IBM HR Analytics dataset from Kaggle (1,470 employee records)\n• Data cleaning, handling missing values & duplicate data, and feature engineering using Python (Pandas)\n• Statistical analysis and data visualization using Pandas, Seaborn, Matplotlib, and Excel\n• Built an interactive Power BI dashboard for operational insights\n\n<b>Key Insights:</b>\n• Low Income: 55% of attrition comes from employees earning < $2,000\n• Young Age Group: Employees aged 18–26 have the highest resignation rate\n• Job Role & Tenure: Entry-level positions such as Sales Executive and Lab Technician have high turnover\n• Work-Life Balance: Low WLB and Environment Satisfaction scores are strong drivers of resignation\n• Marital Status: Single employees have a higher risk of resigning`,
     tech: ['Python','SQL','Power BI','Excel','GitHub'],
     links: [
       { label: 'PPT', icon: 'fas fa-file-powerpoint', url: 'https://drive.google.com/file/d/1lrkkQ0Os66MAdBX2xEvuluNdFhYn3v1Q/view?usp=sharing' },
@@ -86,7 +86,7 @@ const projects = {
       { type: 'img', src: 'myprojects/hranalisis/hr8.png' },
       { type: 'img', src: 'myprojects/hranalisis/hr9.png' },
       { type: 'img', src: 'myprojects/hranalisis/hr10.png' },
-      { type: 'pdf', src: 'myprojects/hranalisis/PPT - HR Attrition Analysis.pdf', label: 'Download PPT PDF' },
+      { type: 'pdf', src: 'myprojects/hranalisis/ppt - HR Attrition.pdf', label: 'Download PPT PDF' },
     ]
   },
 
@@ -94,7 +94,7 @@ const projects = {
     title: 'Optimization of Airbnb LA Analysis with AI Agent IBM Granite',
     cat: 'Data Analysis · AI',
     catFilter: 'data',
-    desc: `Quantitative & Qualitative Analysis of Airbnb Los Angeles Properties (June 2025) to determine pricing strategy, competitive advantages, and AI-based classification.\n\n<b>Data:</b> 32,442 Airbnb Los Angeles listings (79 data columns)\n\n<b>Analysis Process:</b>\n• Performed data cleaning, price normalization, and handling of missing values\n• EDA and data querying using a Pandas Agent\n• Used IBM Granite for AI-based classification from listing descriptions:\n  — Guest type (Solo, Family, Business)\n  — Host type (Elite/Superhost, Professional)\n  — Booking rule type (Strict/Flexible)\n• Visualized profit, demand, price distribution, and room-type revenue analysis\n\n<b>Key Insights:</b>\n• Market segmentation between premium areas (Bel-Air, Malibu) and high-volume areas\n• 50% of listing prices fall in the competitive range of $107–$228 per night\n• High-quality hosts (Superhost, 100% response rate) have the highest occupancy\n• Listings with the AI category "Business" or "Couple" can price above the market average`,
+    desc: `Quantitative & qualitative analysis of Los Angeles Airbnb properties (June 2025) to determine pricing strategy and Airbnb advantages, with AI-based classification.\n\n<b>Data:</b> 32,442 Los Angeles Airbnb listings (79 data columns)\n\n<b>Analysis Process:</b>\n• Performed data cleaning, price normalization, and missing value handling\n• EDA and data queries using a Pandas Agent\n• Used IBM Granite for AI classification based on listing descriptions:\n  — Guest type (Solo, Family, Business)\n  — Host type (Elite/Superhost, Professional)\n  — Booking rule type (Strict/Flexible)\n• Visualized profit analysis, demand, price distribution, and room type revenue\n\n<b>Key Insights:</b>\n• Market segmentation between premium areas (Bel-Air, Malibu) and high-volume areas\n• 50% of listing prices fall within a competitive range of $107–$228 per night\n• High-quality hosts (Superhost, 100% response rate) have the highest occupancy\n• Listings in the AI categories "Business" or "Couple" can set prices above the market average`,
     tech: ['IBM Granite','LangChain','Python','Pandas'],
     links: [
       { label: 'Kaggle', icon: 'fas fa-code', url: 'https://www.kaggle.com/code/nabilahulwana/analysis-of-airbnb-la-using-ibm-granite' },
@@ -106,7 +106,7 @@ const projects = {
       { type: 'img', src: 'myprojects/airbnb/airbnb3.png' },
       { type: 'img', src: 'myprojects/airbnb/airbnb4.png' },
       { type: 'img', src: 'myprojects/airbnb/airbnb5.png' },
-      { type: 'pdf', src: 'myprojects/airbnb/PPT-AIRBNB-IBM-GRANITE.pdf', label: 'Download PPT PDF' },
+      { type: 'pdf', src: 'myprojects/airbnb/PPT Capstone Projects.pdf', label: 'Download PPT PDF' },
     ]
   },
 
@@ -114,10 +114,10 @@ const projects = {
     title: 'DQFashion Sales Analysis 2017 : Transaction & Revenue',
     cat: 'Data Analysis',
     catFilter: 'data',
-    desc: `<b>Project Objective:</b> Analyze sales patterns, branch performance, and product categories to support data-driven business strategy.\n\n<b>Data:</b> 118,000+ sales transactions from 4 branches in Indonesia\n<b>Tools:</b> Power Query, Power Pivot, PivotTable, Excel Dashboard\n\n<b>Key Insights:</b>\n• Total 2017 revenue reached IDR 59.9 billion from 396 transactions and 236,000 products sold\n• Sales peaked in June due to the Eid al-Fitr momentum, while February was the lowest month\n• The Dress category generated the highest revenue, while accessories had high volume but low revenue\n• The Jakarta branch led in number of transactions, while Medan had the largest transaction value\n• Sales patterns showed a significant increase on weekends, especially Sundays\n\n<b>Business Target:</b> Projected revenue growth for 2018 from IDR 59.9B to IDR 73 billion (+22%) through promotion strategies, bundling, and branch optimization.`,
+    desc: `<b>Project Objective:</b> Analyze sales patterns, branch performance, and product categories to support data-driven business strategy.\n\n<b>Data:</b> 118 thousand+ sales transactions from 4 branches in Indonesia\n<b>Tools:</b> Power Query, Power Pivot, PivotTable, Excel Dashboard\n\n<b>Key Insights:</b>\n• Total revenue in 2017 reached Rp 59.9 Billion from 396 transactions and 236 thousand products sold\n• Sales peaked in June due to the Eid al-Fitr momentum, while February was the lowest month\n• The Dress category generated the highest revenue, while accessories had high volume but low revenue\n• The Jakarta branch led in number of transactions, while Medan had the largest transaction value\n• Sales patterns show a significant increase on weekends, especially Sundays\n\n<b>Business Target:</b> Projected 2018 revenue growth from Rp 59.9 B to Rp 73 Billion (+22%) through promotion, bundling, and branch optimization strategies.`,
     tech: ['Excel','Power Query','Power Pivot','DAX'],
     links: [
-      { label: 'Excel Dashboard', icon: 'fas fa-file-excel', url: 'https://docs.google.com/spreadsheets/d/17QrRXMXzql1refVmZ3UsJkgw5d6Khfwq/edit?usp=sharing' },
+      { label: 'Dashboard Excel', icon: 'fas fa-file-excel', url: 'https://docs.google.com/spreadsheets/d/17QrRXMXzql1refVmZ3UsJkgw5d6Khfwq/edit?usp=sharing' },
       { label: 'PPT', icon: 'fas fa-file-powerpoint', url: 'https://drive.google.com/file/d/1pDiMcr2Yc9nKKiCqYnEa4iluJCrhpHTg/view?usp=sharing' },
     ],
     media: [
@@ -133,7 +133,7 @@ const projects = {
     title: 'Python Hackathon: DQLab Retail Crisis & Recovery',
     cat: 'Data Analysis · Hackathon',
     catFilter: 'data',
-    desc: `<b>Project:</b> Automated Sales Pipeline & Market Basket Analysis\n<b>Tools:</b> Python (Pandas, Mlxtend, Matplotlib), Openpyxl\n<b>Data:</b> Retail transactions from the last 6 months (DQFresh Mart)\n\n<b>Project Objective:</b> Reverse the sales decline trend of the last 6 months by detecting small products with consistent growth (Rising Star) and determining a bundling strategy.\n\n<b>Pipeline & Methodology:</b>\n• Rising Star Detection: Uses a 3-day Moving Average. Products are filtered if they show a consecutive upward trend > 12 days, then Growth % is calculated and normalized to Base 100\n• Potential Packaging: Uses the Apriori Algorithm (Association Rules) on the transaction basket matrix with parameters min_support 1%, Lift > 2, and at least one item being a Rising Star product\n\n<b>Output:</b>\n• retail_insight.xlsx: Excel file with 2 sheets — the full Rising Star list and Potential Packaging recommendations\n• rising_star_index.png: Line chart of relative growth (Base 100)\n• rising_star_actual.png: Line chart of actual sales value`,
+    desc: `<b>Project:</b> Automated Sales Pipeline & Market Basket Analysis\n<b>Tools:</b> Python (Pandas, Mlxtend, Matplotlib), Openpyxl\n<b>Data:</b> Retail transactions from the last 6 months (DQFresh Mart)\n\n<b>Project Objective:</b> Reverse the sales decline of the last 6 months by detecting small products that grow consistently (Rising Star) and determining bundling strategies.\n\n<b>Pipeline & Methodology:</b>\n• Rising Star Detection: Used a 3-day Moving Average. Products are filtered if they show a consecutive upward trend of > 12 days, then Growth % is calculated and normalized to Base 100\n• Potential Packaging: Used the Apriori Algorithm (Association Rules) on the transaction basket matrix with min_support 1%, Lift > 2, and at least one item being a Rising Star product\n\n<b>Output:</b>\n• retail_insight.xlsx: Excel file with 2 sheets — the full Rising Star list and Potential Packaging recommendations\n• rising_star_index.png: Relative growth line chart (Base 100)\n• rising_star_actual.png: Line chart of actual sales values`,
     tech: ['Python','Pandas','Mlxtend','Openpyxl','Matplotlib'],
     links: [
       { label: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/nabilahlw/DQLabHackathon-RetailCrisisRecovery.git' },
@@ -143,9 +143,9 @@ const projects = {
       { type: 'img', src: 'myprojects/hackathondqlab/poster.png' },
       { type: 'img', src: 'myprojects/hackathondqlab/index.png' },
       { type: 'img', src: 'myprojects/hackathondqlab/actual.png' },
-      { type: 'pdf', src: 'myprojects/hackathondqlab/ppt python hackathon.pdf', label: 'Download PPT' },
-      { type: 'pdf', src: 'myprojects/hackathondqlab/certificate of Achievement - Hackaton Retail Crisis & Recovery Visualization Challenge using Python - DQLab.pdf', label: 'Download Sertifikat' },
-      { type: 'pdf', src: 'myprojects/hackathondqlab/Hackathon Questions.pdf', label: 'Download Hackathon Brief' },
+      { type: 'pdf', src: 'myprojects/hackathondqlab/ppt python hackathon.pdf', label: 'Download PPT PDF' },
+      { type: 'pdf', src: 'myprojects/hackathondqlab/Hackathon Questions.pdf', label: 'Download Hackathon Problem Set' },
+      { type: 'pdf', src: 'myprojects/hackathondqlab/certificate of Achievement - Hackaton Retail Crisis & Recovery Visualization Challenge using Python - DQLab.pdf', label: 'Download Hackathon Certificate of Top 100 Finalist' },
     ]
   },
 
@@ -153,7 +153,7 @@ const projects = {
     title: 'TMDB Movie End-to-End Data Pipeline (Bronze → Silver → Gold → Dashboard & Cloud)',
     cat: 'Data Engineering',
     catFilter: 'engineering',
-    desc: `<b>Pipeline Process:</b>\n• Data ingested from the TMDB API and Kaggle datasets (movies & credits)\n• Ingestion & Orchestration: Apache Airflow automates 5 sequential tasks every Monday\n• Medallion Architecture (PostgreSQL & dbt):\n  — Bronze: Raw ingestion from API and CSV\n  — Silver & Gold: Data transformation across 14 dbt models from staging to Business-Ready Data Mart\n• Distributed Processing: PySpark ETL for JSON schema extraction, data cleaning, and performance labeling at scale\n• Data Streaming: Kafka + Debezium CDC via PostgreSQL WAL\n• Hybrid Storage & OLAP: Data Lake (7 Parquet files) on MinIO S3-Compatible, BigQuery (Cloud Data Warehouse), and ClickHouse OLAP\n• Data Visualization: Interactive dashboard built with Streamlit\n\n<b>Key Insights & Features:</b>\n• Revenue and profit trend analysis for the film industry (1992–2016)\n• Identification of the most profitable genres and directors with the highest ROI\n• Film performance classification: Mega Blockbuster, Blockbuster, Profitable, to Loss\n• Query optimization using indexing, partitioning, and materialized views`,
+    desc: `<b>Pipeline Process:</b>\n• Pulled data from the TMDB API and Kaggle datasets (movies & credits)\n• Ingestion & Orchestration: Apache Airflow automates 5 sequential tasks every Monday\n• Medallion Architecture (PostgreSQL & dbt):\n  — Bronze: Raw ingestion from the API and CSV\n  — Silver & Gold: Data transformation with 14 dbt models, from staging to a Business-Ready Data Mart\n• Distributed Processing: Used PySpark ETL for JSON schema extraction, data cleaning, and performance labeling in a distributed manner\n• Data Streaming: Used Kafka + Debezium CDC via PostgreSQL WAL\n• Hybrid Storage & OLAP: Data Lake (7 Parquet files) on MinIO S3-Compatible, BigQuery (Cloud Data Warehouse), and ClickHouse OLAP\n• Data Visualization: Interactive dashboard with Streamlit\n\n<b>Key Insights & Features:</b>\n• Revenue and profit trend analysis of the film industry from 1992–2016\n• Identification of the most profitable genres and directors with the highest ROI\n• Film performance classification: Mega Blockbuster, Blockbuster, Profitable, to Loss\n• Query optimization using indexing, partitioning, and materialized views`,
     tech: ['PostgreSQL','PySpark','dbt','Kafka','ClickHouse','MinIO','Streamlit','Airflow','BigQuery'],
     links: [
       { label: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/nabilahlw/tmdb-pipeline-project.git' },
@@ -170,7 +170,7 @@ const projects = {
     title: 'FINOTE - Digital Wallet App',
     cat: 'Mobile Development',
     catFilter: 'app',
-    desc: `<b>App Purpose:</b> A Flutter and Firebase-based personal finance tracker that helps users record income and monitor daily financial activity — simple, secure, and easy to use.\n\n<b>Key Features:</b>\n• Secure login & registration system using Firebase Authentication\n• Full CRUD for income and expense transactions\n• Clean, organized transaction history for easy monitoring\n• Built with OOP principles for cleaner, more scalable code\n\n<b>Tools & Technologies:</b>\n• Flutter (Frontend & UI Framework)\n• Firebase: Authentication, Cloud Firestore, Realtime Database\n• Android Studio`,
+    desc: `<b>App Objective:</b> A personal finance tracker built with Flutter and Firebase that helps users record income and monitor their daily financial condition with simple, secure, and easy-to-use transaction recording.\n\n<b>Key Features:</b>\n• Secure login & registration system using Firebase Authentication\n• CRUD for income and expense transactions\n• Neatly organized, easy-to-monitor transaction history\n• Developed using OOP concepts for cleaner and more scalable code\n\n<b>Tools & Technologies:</b>\n• Flutter (Frontend & UI Framework)\n• Firebase: Authentication, Cloud Firestore, Realtime Database\n• Android Studio`,
     tech: ['Flutter','Firebase','Dart','Android Studio'],
     links: [
       { label: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/nabilahlw/finote.git' },
@@ -189,7 +189,7 @@ const projects = {
     title: 'TRAIN IN - Ticketing Website',
     cat: 'Web Development',
     catFilter: 'app',
-    desc: `<b>App Purpose:</b> TrainIN is a web-based train e-ticketing system built with JavaScript and PHP, enabling users to:\n• Search trip schedules and select train class/type\n• Input passenger and booker details in a structured form\n• Upload payment proof (jpg/png)\n• Print invoices\n• All transaction data is stored and managed through MySQL (phpMyAdmin)\n\n<b>Key Features:</b>\n• Schedule and train type search\n• CRUD for departure schedules and passenger data\n• Online payment upload and invoice-to-image printing\n• Clean data management via phpMyAdmin\n\n<b>Tools & Technologies:</b>\n• Frontend: HTML, CSS, JavaScript\n• Backend: PHP\n• Database: MySQL (phpMyAdmin)`,
+    desc: `<b>App Objective:</b> TrainIN is a web-based train e-ticketing system developed with JavaScript and PHP. The application allows users to:\n• Search travel schedules and choose the type of train that fits their needs\n• Enter booker data and passenger details in a structured way\n• Upload proof of payment (jpg/png)\n• Print invoices\n• All transaction data is stored and managed properly through MySQL (phpMyAdmin)\n\n<b>Key Features:</b>\n• Schedule and train type search\n• CRUD for departure schedules and passenger data\n• Online payment and invoice printing as an image\n• Neatly organized data in phpMyAdmin\n\n<b>Tools & Technologies:</b>\n• Frontend: HTML, CSS, JavaScript\n• Backend: PHP\n• Database: MySQL (phpMyAdmin)`,
     tech: ['PHP','HTML','CSS','JavaScript','MySQL'],
     links: [
       { label: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/nabilahlw/train_in.git' },
@@ -206,12 +206,17 @@ const projects = {
   },
 
   p9: {
-    title: 'Integrated Campus System (SIAKAD, SIMPEG & SIKEU)',
+    title: 'Campus Integration System (SIAKAD, SIMPEG & SIKEU)',
     cat: 'Web Development',
     catFilter: 'app',
-    desc: `<b>App Objective:</b> Integration of 3 campus academic systems (SIAKAD, SIMPEG, SIKEU), each with its own separate MySQL database, so data across systems can be read from one another in real time.\n\n<b>Key Features:</b>\n• SIAKAD: student, lecturer, and course data management\n• SIMPEG: employee and position data management\n• SIKEU: student billing management with online payment via Midtrans Snap\n• Cross-database Eloquent Relationship to read data across systems (e.g. SIKEU displays student data from SIAKAD)\n• Auto-generated unique codes for each entity (student ID, lecturer ID, billing code, etc.)\n\n<b>Tools & Technology:</b>\n• Laravel (multi-database connection)\n• MySQL (3 separate databases: siakad, simpeg, sikeu)\n• Midtrans Snap (payment gateway)\n• Eloquent ORM`,
+    desc: `<b>App Objective:</b> Integrate 3 campus academic systems (SIAKAD, SIMPEG, SIKEU), each with its own separate MySQL database, so that data can be read across systems in real time.\n\n<b>Key Features:</b>\n• SIAKAD: management of student, lecturer, and course data\n• SIMPEG: management of employee and position data\n• SIKEU: management of student invoices with online payment via Midtrans Snap\n• Cross-database Eloquent Relationships to read data across systems (e.g., SIKEU displays student data from SIAKAD)\n• Auto-generated unique codes for each entity (NIM, NIDN, invoice code, etc.)\n\n<b>Tools & Technologies:</b>\n• Laravel (multi-database connection)\n• MySQL (3 separate databases: siakad, simpeg, sikeu)\n• Midtrans Snap (payment gateway)\n• Eloquent ORM`,
     tech: ['Laravel','PHP','MySQL','Midtrans'],
-    links: [{ label: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/nabilahlw/integrated-campus-information-system.git' }],
+    links: [{ label: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/nabilahlw/integrated-campus-information-system.git' },
+      {
+      label: 'Demo Video',
+      icon: 'fas fa-play-circle',
+      url: 'https://drive.google.com/file/d/1FYWI-2kRL4NmZh30aE1Zw5yYQr9VFBIK/view?usp=sharing'
+    }],
     media: [
       { type: 'img', src: 'myprojects/sistemintegrasi/images/dashboardsiakad.png' },
       { type: 'img', src: 'myprojects/sistemintegrasi/images/dashboard2_sikeu.png' },
@@ -227,32 +232,35 @@ const projects = {
     title: 'WhatsApp Documentation Automation Bot',
     cat: 'Automation & Bot Development',
     catFilter: 'app',
-    desc: `<b>App Objective:</b> Build an AI-based automated WhatsApp bot that receives activity documentation photos/videos from a WhatsApp Group, intelligently classifies the school name & class (including tolerance for typos/new words), and automatically uploads them into a structured Google Drive folder hierarchy.\n\n<b>Key Features:</b>\n• <b>Strict & AI-Powered Smart Normalization:</b> A high-precision string processing algorithm that reads the education level (elementary/middle school), school name, and class code. Includes fuzzy matching to auto-correct typos (e.g. "Hebit/Hebut" → "Hebat"), plus the ability to dynamically create new folders when a new school name is detected.\n• <b>Auto-Folder Hierarchy in Google Drive:</b> Automatically creates and organizes folders in Google Drive based on class name and the current month-year (Parent Folder → Class Name → Month-Year → File).\n• <b>Multi-Media Handler:</b> Supports image and video uploads with dynamic file-format extraction (JPEG, PNG, MP4, MOV, etc.) and timeout protection.\n• <b>WhatsApp Session & Group Listener:</b> Session persistence integration using LocalAuth to monitor incoming messages from the target group in real time.\n• <b>Auto Reply with Interactive Path:</b> Sends an automatic response on WhatsApp after a successful upload, including the folder's path location in Google Drive.`,
+    desc: `<b>App Objective:</b> Build an AI-based automated WhatsApp bot that receives activity documentation photos/videos from a WhatsApp Group, intelligently classifies school and class names (including tolerance for typos/new words), then automatically uploads them to a structured Google Drive folder hierarchy.\n\n<b>Key Features:</b>\n• <b>Strict & AI-Powered Smart Normalization:</b> A high-precision string processing algorithm to read the level (elementary/junior high), school name, and class code. Equipped with a fuzzy matching system to automatically correct typos (e.g., "Hebit/Hebut" → "Hebat"), plus the ability to dynamically create a new folder when a new school name is detected.\n• <b>Auto-Folder Hierarchy in Google Drive:</b> Automatically creates and organizes folders in Google Drive based on class name and the current month-year (Parent Folder → Class Name → Month-Year → File).\n• <b>Multi-Media Handler:</b> Supports image and video uploads with dynamic file format extraction (JPEG, PNG, MP4, MOV, etc.) and timeout protection.\n• <b>WhatsApp Session & Group Listener:</b> Session persistence integration using LocalAuth to monitor incoming messages from the target group in real time.\n• <b>Auto Reply with Interactive Path:</b> Sends an automatic WhatsApp response after a successful upload, including the Google Drive folder path location.`,
     tech: ['Node.js','Google Drive API','Gemini AI'],
     links: [
       { label: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/nabilahlw/documentation-automation-whatsapp-web.js.git' },
       { label: 'Demo Video', icon: 'fas fa-play-circle', url: 'https://drive.google.com/file/d/1mJBEVsjqIqzRrnYgQi2r6_dWnk7NWzKJ/view?usp=drive_link' },
+      { label: 'Article', icon: 'fas fa-file-alt', url: 'https://garuda.kemdiktisaintek.go.id/documents/detail/6688499' },
     ],
     media: [
       { type: 'img', src: 'myprojects/whatsapp-bot/bot1.png' },
       { type: 'img', src: 'myprojects/whatsapp-bot/bot2.png' },
       { type: 'img', src: 'myprojects/whatsapp-bot/bot3.png' },
       { type: 'img', src: 'myprojects/whatsapp-bot/bot4.png' },
+      { type: 'pdf', src: 'myprojects/whatsapp-bot/dokumentasi-whatsappbot.pdf', label: 'Download Article' },
+      { type: 'pdf', src: 'myprojects/whatsapp-bot/nabilahulwana-senatib.pdf', label: 'Download Certificate PDF' },
     ]
   },
-  p11: {
+p11: {
   title: 'Integrated Clinic Information System',
-  cat: 'Enterprise Information System',
-  catFilter: 'app',
-  desc: `<b>Project Overview:</b> Designed and developed a web-based integrated clinic management system to digitalize and optimize end-to-end clinic operations, including patient registration, medical examinations, billing, online payments, and business analytics within a centralized platform.\n\n<b>Key Features:</b>\n• <b>Role-Based Access Control (RBAC):</b> Secure authentication and authorization for Administrator, Registration Staff, Doctor, Cashier, and Head of Clinic.\n• <b>Patient & Medical Record Management:</b> Full CRUD functionality for patients, doctors, employees, clinic departments (Poli), medical services, medicines, doctor schedules, examinations, diagnoses, prescriptions, and visit history.\n• <b>Billing & Payment Integration:</b> Automated invoice generation based on examination results with support for manual payments and Midtrans Sandbox integration using Snap API, webhook callbacks, and SHA-512 signature verification.\n• <b>Business Intelligence Dashboard:</b> Interactive analytics dashboard featuring clinic KPIs, revenue trends, patient visit statistics, Top 5 services, departments, diagnoses, complaints, shift distribution, and PDF/Excel report export.\n• <b>Enterprise System Integration:</b> Seamless integration between patient registration, medical examination, billing, payment gateway, and reporting modules, ensuring consistent real-time data across the entire clinic management system.`,
-  tech: [
-    'Laravel 12',
-    'PHP',
-    'MySQL',
-    'Midtrans API',
-    'Blade',
-    'AdminLTE',
-    'Chart.js'
+cat: 'Enterprise Information System',
+catFilter: 'app',
+desc: `<b>Project Objective:</b> Group assignment. Developed a web-based integrated clinic management system to digitalize and streamline clinic operations, from patient registration, medical examinations, billing, and online payments to business analytics in a single platform.\n\n<b>Key Features:</b>\n• <b>Role-Based Access Control:</b> Multi-role authentication and authorization for Administrator, Registration Staff, Doctor, Cashier, and Head of Clinic.\n• <b>Patient & Medical Record Management:</b> Complete CRUD modules for patients, doctors, employees, clinic departments (Poli), medical services, medicines, doctor schedules, examinations, diagnoses, prescriptions, and visit history.\n• <b>Integrated Billing & Online Payment:</b> Automatic invoice generation based on examination results, with manual payment support and Midtrans Sandbox integration using Snap API, webhook callbacks, and SHA-512 signature verification.\n• <b>Analytics Dashboard & Reporting:</b> Interactive dashboard displaying clinic KPIs, revenue trends, visit statistics, Top 5 services, departments, diagnoses, complaints, and shift distribution, with PDF & Excel export.\n• <b>Corporate Application Integration:</b> End-to-end integration among the registration, medical examination, billing, payment gateway, and reporting modules so clinic data stays consistent in real time across the system.`,
+tech: [
+'Laravel 12',
+'PHP',
+'MySQL',
+'Midtrans API',
+'Blade',
+'AdminLTE',
+'Chart.js'
   ],
   links: [
     {
@@ -267,7 +275,7 @@ const projects = {
     },
   ],
   media: [
-    { type: 'img', src: 'myprojects/clinic-integrated-system/clinic1.png' },
+    { type: 'img', src: 'myprojects/clinic-integrated-system/clicic1.png' },
     { type: 'img', src: 'myprojects/clinic-integrated-system/clinic2.png' },
     { type: 'img', src: 'myprojects/clinic-integrated-system/clinic3.png' },
     { type: 'img', src: 'myprojects/clinic-integrated-system/clinic4.png' },
@@ -453,7 +461,6 @@ function getTechIcon(name) {
   return map[name] || 'fas fa-code';
 }
 
-
 /* ═══════════════════════════════════════════════════
    CERTIFICATES MODAL
 ═══════════════════════════════════════════════════ */
@@ -463,10 +470,10 @@ const CERTS = [
     isImg: true,
     dl: 'https://drive.google.com/file/d/1FitDy0euaLKGKZa-jCuEpqRA9xQW-EkA/view?usp=sharing' },
 
-  { title: 'Belajar Dasar Cloud dan Gen AI di AWS — Dicoding',
-    file: 'certificates/Certificate - Belajar Dasar Cloud & Gen AI di AWS - Dicoding.pdf',
+  { title: 'Presenter — Implementation of Artificial Intelligence in a Cloud-Based WhatsApp Photo and Video Documentation Automation System to Google Drive — Universitas Duta Bangsa',
+    file: 'certificates/Certificate - Pemakalah Senatib UDB 2026.pdf',
     isImg: false,
-    dl: 'https://drive.google.com/file/d/1RabPLcsYWLCgAHPpBlMymfgVbhZTwc5b/view?usp=sharing' },
+    dl: 'https://drive.google.com/file/d/1RB4wMEemnxj60suHRJrCsihXq7joeQX6/view?usp=sharing' },
 
   { title: 'Classifying & Summarizing Data Using IBM Granite — IBM SkillsBuild',
     file: 'certificates/Certificate - Classifying Data Using IBM Granite - IBM SkillsBuild.pdf',
@@ -523,7 +530,7 @@ const CERTS = [
     isImg: false,
     dl: 'https://drive.google.com/file/d/10uPr3--f5sYse-UQfeIQdJCVnC7lZorC/view?usp=sharing' },
 
-  { title: 'Peserta Workshop StartUp Digital Open Source — Fikom UDB',
+  { title: 'Participant, Digital Open Source StartUp Workshop — Fikom UDB',
     file: 'certificates/Certificate - StartUp Digital Open Source - Fikom UDB.jpg',
     isImg: true,
     dl: 'https://drive.google.com/file/d/1lfbt5-Rfq6tfjHMaC_had0-l99UxfkCj/view?usp=sharing' },
@@ -533,7 +540,7 @@ const CERTS = [
     isImg: false,
     dl: 'https://drive.google.com/file/d/1_bxGeNfbSish9Lcyj2MtboVZfk_9SuXj/view?usp=sharing' },
 
-  { title: 'Bootcamp Data Analyst with Excel Batch 22 — DQLab (Sertifikat Kelulusan)',
+  { title: 'Bootcamp Data Analyst with Excel Batch 22 — DQLab (Certificate of Graduation)',
     file: 'certificates/Certificate of Completion - Bootcamp Data Analyst with Excel Batch 22 - DQLab.pdf',
     isImg: false,
     dl: 'https://drive.google.com/file/d/12vdkBmxI0Lu3afrMpXmsfy9O4aETUihw/view?usp=sharing' },
@@ -543,7 +550,6 @@ const CERTS = [
     isImg: false,
     dl: 'https://drive.google.com/file/d/1VbzMMW02c1rI98VttQri2od3dx-a4RNg/view?usp=sharing' },
 ];
-
 
 function openCert(title, previewUrl, downloadUrl) {
   document.getElementById('certModalTitle').textContent = title;
